@@ -7,8 +7,7 @@ body {
 }
 
 .container-fluid {
-    background-color: white; 
-    border-bottom: 1px solid;
+    background-color: #acacac;
 }
 
 .button {
@@ -24,10 +23,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    margin-right: 11em;
+    height: 120px;
 }
 
 .button:hover input {
-    color: #ffaf04;
+    color: red;
 }
