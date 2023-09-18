@@ -19,16 +19,16 @@
             <div class="container-fluid d-flex justify-content-evenly align-items-center">
                 <div class="d-flex">
                     <div class="button">
-                        <asp:Button ID="Button1" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                        <asp:Button ID="Button1" PostBackUrl="Default.aspx" runat="server" Text="HOME PAGE" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button2" PostBackUrl="" runat="server" Text="I PRODOTTI" />
+                        <asp:Button ID="Button2" PostBackUrl="./Prodotti.aspx" runat="server" Text="I PRODOTTI" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button3" PostBackUrl="" runat="server" Text="IL RISTORANTE" />
+                        <asp:Button ID="Button3" PostBackUrl="Login.aspx" runat="server" Text="LOGIN" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button4" PostBackUrl="" runat="server" Text="SPEDIZIONI" />
+                        <asp:Button ID="Button4" PostBackUrl="/LoginC/Carrello.aspx" runat="server" Text="Carrello" />
                     </div>
                 </div>
                 <div class="centered-logo">
@@ -42,7 +42,7 @@
                         <asp:Button ID="Button6" PostBackUrl="" runat="server" Text="PROMO" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button8" PostBackUrl="" runat="server" Text="CONTATTI" />
+                        <asp:Button ID="Button8" PostBackUrl="/Admin/NuovoProdotto.aspx" runat="server" Text="AGGIUNGI PRODOTTO" />
                     </div>
                 </div>
             </div>
@@ -50,6 +50,5 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </form>
-    <script src="../Scripts/bootstrap.min.js"></script>
 </body>
 </html>
