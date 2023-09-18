@@ -7,16 +7,50 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Body.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>NAV BAR</h1>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <div class="button">
+                        <asp:Button ID="Button1" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                    <div class="button">
+                        <asp:Button ID="Button2" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                    <div class="button">
+                        <asp:Button ID="Button3" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                    <div class="button">
+                        <asp:Button ID="Button4" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                </div>
+
+                <div class="centered-logo">
+                    <asp:ImageButton ID="ImageButton1" Style="width: 150px" ImageUrl="~/Content/imgs/logo.png" runat="server" />
+                </div>
+
+                <div class="d-flex">
+                    <div class="button">
+                        <asp:Button ID="Button5" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                    <div class="button">
+                        <asp:Button ID="Button6" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                    <div class="button">
+                        <asp:Button ID="Button8" PostBackUrl="" runat="server" Text="HOME PAGE" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </form>
     <script src="../Scripts/bootstrap.min.js"></script>
 </body>
