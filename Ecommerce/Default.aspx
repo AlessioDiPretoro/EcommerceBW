@@ -3,10 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
-
-   
     <div class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h3 class="title">Una Macelleria Sotrica a tua disposizione</h3>
         <div class="card mb-3 w-75">
@@ -29,7 +25,6 @@
                             <br />
                             Impegno e costanza sono tutt’oggi le nostre parole d’ordine.
                         </p>
-
                         <asp:Button ID="Button1" runat="server" Text="Scopri Chi Siamo" />
                     </div>
                 </div>
