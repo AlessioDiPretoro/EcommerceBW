@@ -1,21 +1,74 @@
-﻿/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+﻿
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/*HOMEPAGE*/
+
+/*Carousel*/
+
+.carousel-inner {
+    height: 25em;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+/*MAIN*/
+main {
+    background-color: #f5f5f5;
+    margin-bottom: 10em;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
-    }
+section {
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.homeCard {
+    height: 45em;
+    width: 100%;
+}
+
+.cardContent {
+    width: 50%;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.homeImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardContent h2, p {
+    text-align: center;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+.textGold {
+    color: #ccaa55;
+}
+
+.textGrey {
+    color: #808080;
+}
+
+.cardTitle {
+    font-size: 53px;
+    margin-bottom: 1em;
+}
+
+.myBtn {
+    background: #ccaa55;
+    border: none;
+    padding: 0.5em 2em;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 1em;
 }
