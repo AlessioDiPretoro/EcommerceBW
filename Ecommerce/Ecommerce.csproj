@@ -136,11 +136,11 @@
       <DependentUpon>StyleSheet1.css</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="LoginC\Carrello.aspx" />
     <Content Include="LoginC\Dettagli.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="Roles\CreateUserWizardWithRoles.aspx" />
     <Content Include="Roles\ManageRoles.aspx" />
     <Content Include="Roles\RoleBasedAuthorization.aspx" />
