@@ -135,7 +135,14 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\imgs\logo.png" />
+    <Content Include="Content\imgs\vitello.png" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\StyleSheet1.css">
+      <DependentUpon>StyleSheet1.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\StyleSheet1.min.css">
+      <DependentUpon>StyleSheet1.css</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="LoginC\Carrello.aspx" />
     <Content Include="LoginC\Dettagli.aspx" />
@@ -175,7 +182,12 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Admin\Web.config" />
-    <Content Include="LoginC\Web.config" />
+    <Content Include="Login\Web.config" />
+    <Content Include="Content\StyleSheet1.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
