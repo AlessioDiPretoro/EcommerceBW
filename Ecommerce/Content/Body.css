@@ -1,10 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Open+Sans&display=swap');
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* INIZIO SEZIONE NAVBAR */
+
 
 .container-fluid {
     background-color: white; 
@@ -13,6 +10,11 @@ body {
 
 .button {
     font-family: 'Arima', cursive;
+}
+
+h1, h2, h3 {
+    font-family: 'Arima', cursive;
+    color: red;
 }
 
 .button input {
@@ -30,4 +32,13 @@ body {
 
 .button:hover input {
     color: #ffaf04;
+}
+
+/* INIZIO SEZIONE PAGINA DEFAULT */
+.card {
+    border: none;
+}
+
+.card-text {
+    font-size: 13px;
 }
