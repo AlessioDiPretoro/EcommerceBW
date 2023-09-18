@@ -13,7 +13,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <nav class="navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-evenly align-items-center">
                 <div class="d-flex">
@@ -30,11 +29,9 @@
                         <asp:Button ID="Button4" PostBackUrl="" runat="server" Text="SPEDIZIONI" />
                     </div>
                 </div>
-
                 <div class="centered-logo">
                     <asp:ImageButton ID="ImageButton1" Style="width: 250px" ImageUrl="~/Content/imgs/logo.png" runat="server" />
                 </div>
-
                 <div class="d-flex">
                     <div class="button">
                         <asp:Button ID="Button5" PostBackUrl="" runat="server" Text="CHI SIAMO" />
@@ -48,7 +45,6 @@
                 </div>
             </div>
         </nav>
-
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </form>
