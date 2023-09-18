@@ -138,9 +138,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\imgs\logo.png" />
-    <Content Include="Content\imgs\sede.png" />
-    <Content Include="Content\imgs\vitello.png" />
+    <Content Include="Content\Img\logo.png" />
+    <Content Include="Content\Img\sede.png" />
+    <Content Include="Content\Img\vitello.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleSheet1.css">
       <DependentUpon>StyleSheet1.scss</DependentUpon>
