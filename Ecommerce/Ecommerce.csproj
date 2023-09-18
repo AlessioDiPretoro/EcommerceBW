@@ -134,7 +134,6 @@
     <Content Include="Default.aspx" />
     <Content Include="LoginC\Carrello.aspx" />
     <Content Include="LoginC\Dettagli.aspx" />
-    <Content Include="LoginC\Dettagli.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
