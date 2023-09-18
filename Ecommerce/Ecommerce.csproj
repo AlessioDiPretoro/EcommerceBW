@@ -105,6 +105,7 @@
     <Content Include="Admin\GrigliaProdotti.aspx" />
     <Content Include="Admin\ModificaProdotto.aspx" />
     <Content Include="Admin\NuovoProdotto.aspx" />
+    <Content Include="LoginC\Carrello.aspx" />
     <Content Include="Content\Body.css" />
     <Content Include="Content\imgs\logo.png" />
     <Content Include="Assets\Img\Photo_01.png" />
@@ -112,7 +113,6 @@
     <Content Include="Assets\Img\Photo_03.jpg" />
     <Content Include="Assets\Img\Photo_04.jpg" />
     <Content Include="Login.aspx" />
-    <Content Include="Login\Carrello.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -134,7 +134,7 @@
     <Content Include="Default.aspx" />
     <Content Include="LoginC\Carrello.aspx" />
     <Content Include="LoginC\Dettagli.aspx" />
-    <Content Include="Login\Dettagli.aspx" />
+    <Content Include="LoginC\Dettagli.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -227,18 +227,11 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login\Carrello.aspx.cs">
+    <Compile Include="LoginC\Carrello.aspx.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login\Carrello.aspx.designer.cs">
+    <Compile Include="LoginC\Carrello.aspx.designer.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -248,11 +241,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login\Dettagli.aspx.cs">
+    <Compile Include="LoginC\Dettagli.aspx.cs">
       <DependentUpon>Dettagli.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login\Dettagli.aspx.designer.cs">
+    <Compile Include="LoginC\Dettagli.aspx.designer.cs">
       <DependentUpon>Dettagli.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
