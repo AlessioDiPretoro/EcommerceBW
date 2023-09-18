@@ -109,19 +109,6 @@
     <Content Include="Content\Img\Photo_02.jpg" />
     <Content Include="Content\Img\Photo_03.jpg" />
     <Content Include="Content\Img\Photo_04.jpg" />
-    <Content Include="Assets\Img\Photo_01.png" />
-    <Content Include="Assets\Img\Photo_02.jpg" />
-    <Content Include="Assets\Img\Photo_03.jpg" />
-    <Content Include="Assets\Img\Photo_04.jpg" />
-    <Content Include="Login.aspx" />
-    <Content Include="LoginC\Carrello.aspx" />
-    <Content Include="Content\Body.css" />
-    <Content Include="Content\imgs\logo.png" />
-    <Content Include="Assets\Img\Photo_01.png" />
-    <Content Include="Assets\Img\Photo_02.jpg" />
-    <Content Include="Assets\Img\Photo_03.jpg" />
-    <Content Include="Assets\Img\Photo_04.jpg" />
-    <Content Include="Login.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -191,12 +178,6 @@
     <Content Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults" />
     <Content Include="Content\StyleSheet1.scss" />
-    <Content Include="Login\Web.config" />
-    <Content Include="Content\StyleSheet1.scss" />
-    <None Include="compilerconfig.json" />
-    <None Include="compilerconfig.json.defaults">
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
