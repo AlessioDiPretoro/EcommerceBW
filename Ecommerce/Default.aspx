@@ -3,9 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
     <h1>Home page</h1>
+    <%--Carousel--%>
     <div id="Carousel" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -63,22 +62,44 @@
         </div>
     </div>
 
+    <%--HomeContent--%>
 
-    <div class="homeCard d-flex justify-content-center">
-        <div class="cardContent">
-            <p class="textGold">I PRODOTTI</p>
-            <h2 class="cardTitle">Freschi, cotti o stagionati: più che buoni, semplicemente unici</h2>
-            <p class="textGrey">
-                Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
+    <%--Card1--%>
+    <section>
+        <div class="homeCard d-flex justify-content-center">
+            <div class="cardContent">
+                <p class="textGold">I PRODOTTI</p>
+                <h2 class="cardTitle">Freschi, cotti o stagionati: più che buoni, semplicemente unici</h2>
+                <p class="textGrey">
+                    Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
+                 <br>
                     <br>
-                <br>
-                Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
-            </p>
-            <asp:Button ID="Button2" runat="server" Text="Scopri di più" CssClass="myBtn" />
+                    Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
+                </p>
+                <asp:Button ID="Button2" runat="server" Text="Scopri di più" CssClass="myBtn" />
+            </div>
+            <div class="w-50">
+                <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" CssClass="homeImage" />
+            </div>
         </div>
-        <div class="w-50">
-            <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" CssClass="homeImage" />
+        <%--Card2--%>
+        <div class="homeCard d-flex justify-content-center">
+
+            <div class="w-50">
+                <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2015/05/macelleria-preview.jpg" runat="server" CssClass="homeImage" />
+            </div>
+            <div class="cardContent">
+                <p class="textGold">I PRODOTTI</p>
+                <h2 class="cardTitle">Freschi, cotti o stagionati: più che buoni, semplicemente unici</h2>
+                <p class="textGrey">
+                    Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
+                    <br>
+                    <br>
+                    Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
+                </p>
+                <asp:Button ID="Button3" runat="server" Text="Scopri di più" CssClass="myBtn" />
+            </div>
         </div>
-    </div>
+    </section>
 
 </asp:Content>
