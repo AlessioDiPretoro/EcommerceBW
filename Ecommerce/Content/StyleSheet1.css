@@ -16,20 +16,16 @@ h1, h2, h3 {
   background-color: white;
   border-bottom: 1px solid;
 }
-
 .container-fluid .button {
   font-family: "Arima", cursive;
 }
-
 .container-fluid .button :hover {
   color: #ffaf04;
 }
-
 .container-fluid .button input {
   border: none;
   background: none;
 }
-
 .container-fluid .centered-logo {
   display: flex;
   justify-content: center;
@@ -42,11 +38,9 @@ h1, h2, h3 {
 .card {
   border: none;
 }
-
 .card .card-text {
   font-size: 13px;
 }
-
 .card .card-body input {
   background: none;
   border: 1px solid red;
