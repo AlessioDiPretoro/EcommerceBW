@@ -7,20 +7,29 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Ecommerce.Admin
+namespace Ecommerce.Roles
 {
 
 
-    public partial class GrigliaProdotti
+    public partial class ManageRoles
     {
 
         /// <summary>
-        /// Controllo GridView1.
+        /// Controllo RoleName.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox RoleName;
+
+        /// <summary>
+        /// Controllo CreateRoleButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateRoleButton;
     }
 }
