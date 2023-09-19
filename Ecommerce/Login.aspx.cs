@@ -33,20 +33,5 @@ namespace Ecommerce
                 ErrorLogin.Visible = true;
             }
         }
-
-        protected void Signup_Click(object sender, EventArgs e)
-        {
-            if (password.Text == passwordConf.Text)
-            {
-                string name = nome.Text;
-                string surname = cognome.Text;
-                string address = indirizzo.Text;
-                string city = citta.Text;
-                string postalCode = cap.Text;
-                string password = passwordConf.Text;
-                bool paymentMode = CheckBox1.Checked;
-                //fare INSERT al db
-            }
-        }
     }
 }
