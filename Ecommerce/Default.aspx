@@ -39,8 +39,8 @@
 
 
     <div id="content" class="d-flex flex-column justify-content-center align-items-center mt-5">
-         <asp:Image ID="Image2" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
-        <h3 class="title">Una Macelleria Sotrica a tua disposizione</h3>
+        <asp:Image ID="Image2" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+        <h2 class="title">Una Macelleria Sotrica a tua disposizione</h2>
         <div class="card mb-3 w-75">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -72,8 +72,11 @@
         <img src="Content/Img/Photo_03_rig.png" class="d-block w-100" alt="...">
     </div>
 
+
+
+
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
-        <h3 class="title">Il nostro prodotto</h3>
+        <h2>Il nostro prodotto</h2>
         <asp:Button ID="Button4" runat="server" Text="Scopri I Prodotti" />
         <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
         <div class="text-title">
@@ -81,56 +84,64 @@
         </div>
     </div>
 
+
+
+
+
+
+
     <div id="content4" class="d-flex flex-column justify-content-center align-items-center mt-5">
-       
-        <h3 class="title">Prodotti scelti per te</h3>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h2>Prodotti scelti per te</h2>
+        <div class="d-flex justify-content-center align-items-center text-center">
+            <div class="card" style="width: 18rem;">
+                <asp:Image ID="Image4" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <div class="card-body">
+                    <h3>Fiorentina</h3>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <asp:Image ID="Image5" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <div class="card-body">
+                    <h3>Filetto a T</h3>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <asp:Image ID="Image6" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <div class="card-body">
+                    <h3>Fette di Scamone</h3>
+                </div>
             </div>
         </div>
     </div>
 
-    <section>
-        <div class="homeCard d-flex justify-content-center">
-            <div class="cardContent">
-                <p class="textGold">I PRODOTTI</p>
-                <h2 class="cardTitle">Freschi, cotti o stagionati: più che buoni, semplicemente unici</h2>
-                <p class="textGrey">
-                    Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
-                 <br>
-                    <br>
-                    Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
-                </p>
-                <asp:Button ID="Button2" runat="server" Text="Scopri di più" CssClass="myBtn" />
-            </div>
-            <div class="w-50">
-                <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" CssClass="homeImage" />
-            </div>
-        </div>
 
 
 
-        <div class="homeCard d-flex justify-content-center">
 
-            <div class="w-50">
-                <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2015/05/macelleria-preview.jpg" runat="server" CssClass="homeImage" />
-            </div>
-            <div class="cardContent">
-                <p class="textGold">I PRODOTTI</p>
-                <h2 class="cardTitle">Freschi, cotti o stagionati: più che buoni, semplicemente unici</h2>
-                <p class="textGrey">
-                    Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
-                    <br>
-                    <br>
-                    Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
-                </p>
-                <asp:Button ID="Button3" runat="server" Text="Scopri di più" CssClass="myBtn" />
+
+    <div id="content5" class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <h2>I Prodotti</h2>
+        <div class="card mb-3 w-75">
+            <div class="row no-gutters">
+                <div class="card-body col-md-8">
+                    <h3>Freschi, cotti o stagionati:<br />
+                        più che buoni, semplicemente unici</h3>
+                    <div class="card-text">
+                        Selezioniamo e produciamo una gamma completa di carni fresche, preparati e prodotti stagionati: dai tradizionali salumi toscani alle iconiche bistecche di Vitellone, dai teneri arrosti alle gustose salsicce.
+                        <br>
+                        <br>
+                        Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
+                    </div>
+                    <asp:Button ID="Button2" runat="server" Text="Scopri di più" />
+                </div>
+                <div class="col-md-4">
+                    <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" />
+                </div>
             </div>
         </div>
-    </section>
+
+       
 
 </asp:Content>
