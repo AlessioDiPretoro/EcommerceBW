@@ -6,7 +6,7 @@
 
 
 
-    <div id="Carousel" class="carousel slide">
+    <div id="carousel" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -38,7 +38,8 @@
 
 
 
-    <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <div id="content" class="d-flex flex-column justify-content-center align-items-center mt-5">
+         <asp:Image ID="Image2" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
         <h3 class="title">Una Macelleria Sotrica a tua disposizione</h3>
         <div class="card mb-3 w-75">
             <div class="row no-gutters">
@@ -67,8 +68,31 @@
         </div>
     </div>
 
+    <div id="content2" class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <img src="Content/Img/Photo_03_rig.png" class="d-block w-100" alt="...">
+    </div>
 
+    <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <h3 class="title">Il nostro prodotto</h3>
+        <asp:Button ID="Button4" runat="server" Text="Scopri I Prodotti" />
+        <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
+        <div class="text-title">
+            <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>
+        </div>
+    </div>
 
+    <div id="content4" class="d-flex flex-column justify-content-center align-items-center mt-5">
+       
+        <h3 class="title">Prodotti scelti per te</h3>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
 
     <section>
         <div class="homeCard d-flex justify-content-center">
