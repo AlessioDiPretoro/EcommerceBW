@@ -11,7 +11,7 @@ namespace Ecommerce
 {
 
 
-    public partial class Prodotti
+    public partial class ProdottiCategoria
     {
 
         /// <summary>
