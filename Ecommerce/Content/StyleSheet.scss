@@ -1,13 +1,12 @@
 ﻿/* FONT */
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Open+Sans&display=swap");
 
-
 /* BODY */
 body {
     font-family: "Open Sans", sans-serif !important;
     margin: 0;
     padding: 0;
-    height:100%
+    height: 100%;
 }
 
 h1, h2, h3 {
@@ -22,6 +21,7 @@ h1, h2, h3 {
 
 /* SEZIONE NAVBAR */
 .container-fluid {
+    font-family: "Arima", cursive !important;
     background-color: white;
     border-bottom: 1px solid;
 
@@ -123,11 +123,3 @@ section {
         object-fit: cover;
     }
 }
-
-
-
-
-
-
-
-

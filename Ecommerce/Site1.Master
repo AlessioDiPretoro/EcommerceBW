@@ -7,13 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="Content/StyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar-expand-lg">
+        <nav id="navbar" class="navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-evenly align-items-center">
                 <div class="d-flex">
                     <div class="button">
@@ -26,7 +26,7 @@
                         <asp:Button ID="Button3" PostBackUrl="Login.aspx" runat="server" Text="LOGIN" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button4" PostBackUrl="/LoginC/Carrello.aspx" runat="server" Text="Carrello" />
+                        <asp:Button ID="Button4" PostBackUrl="/LoginC/Carrello.aspx" runat="server" Text="CARRELLO" />
                     </div>
                 </div>
                 <div class="centered-logo">

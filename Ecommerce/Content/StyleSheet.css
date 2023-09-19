@@ -16,6 +16,7 @@ h1, h2, h3 {
 /* SEZIONE LOGIN */
 /* SEZIONE NAVBAR */
 .container-fluid {
+  font-family: "Arima", cursive !important;
   background-color: white;
   border-bottom: 1px solid;
 }

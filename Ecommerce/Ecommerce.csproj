@@ -129,11 +129,11 @@
     <Content Include="Content\Img\sede.png" />
     <Content Include="Content\Img\vitello.png" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\StyleSheet1.css">
-      <DependentUpon>StyleSheet1.scss</DependentUpon>
+    <Content Include="Content\StyleSheet.css">
+      <DependentUpon>StyleSheet.scss</DependentUpon>
     </Content>
-    <Content Include="Content\StyleSheet1.min.css">
-      <DependentUpon>StyleSheet1.css</DependentUpon>
+    <Content Include="Content\StyleSheet.min.css">
+      <DependentUpon>StyleSheet.css</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
@@ -178,7 +178,7 @@
     <Content Include="LoginC\Web.config" />
     <Content Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults" />
-    <Content Include="Content\StyleSheet1.scss" />
+    <Content Include="Content\StyleSheet.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
