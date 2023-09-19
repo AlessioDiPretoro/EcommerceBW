@@ -157,6 +157,24 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
+/*PAGINA CARRELLO*/
+.cartTable {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cartTable tbody {
+  width: 60%;
+}
+.cartTable .cartImg {
+  height: 4em;
+}
+.cartTable th {
+  padding: 5px 10px;
+  width: 10%;
+}
+.cartTable td {
+  padding: 5px 10px;
 /*Card*/
 .card {
   border: none;
