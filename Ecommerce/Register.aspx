@@ -31,7 +31,7 @@
             <asp:RequiredFieldValidator ControlToValidate="passwordConf" runat="server" ErrorMessage="Inserire Password"></asp:RequiredFieldValidator>
             <asp:CompareValidator ID="CompareValidator1" ControlToValidate="password" ControlToCompare="passwordConf" runat="server" ErrorMessage="Password differenti"></asp:CompareValidator>
 
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Metodo di pagamento" CssClass="btn btn-outline-primary" />
+            <asp:CheckBox ID="CheckPayment" runat="server" Text="Metodo di pagamento" CssClass="btn btn-outline-primary" />
 
             <asp:Button ID="Signup" CssClass="btn btn-success" runat="server" Text="Registrati" OnClick="Signup_Click" />
         </div>
