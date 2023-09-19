@@ -14,6 +14,13 @@ h1, h2, h3 {
 }
 
 /* SEZIONE LOGIN */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70vh;
+  margin: auto;
+}
+
 /* SEZIONE NAVBAR */
 .container-fluid {
   font-family: "Arima", cursive !important;

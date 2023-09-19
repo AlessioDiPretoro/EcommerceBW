@@ -142,6 +142,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Prodotti.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Roles\CreateUserWizardWithRoles.aspx" />
     <Content Include="Roles\ManageRoles.aspx" />
     <Content Include="Roles\RoleBasedAuthorization.aspx" />
@@ -273,6 +274,13 @@
       <DependentUpon>Prodotti.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Roles\CreateUserWizardWithRoles.aspx.cs">
       <DependentUpon>CreateUserWizardWithRoles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
