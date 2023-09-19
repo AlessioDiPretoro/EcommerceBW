@@ -1,16 +1,15 @@
-﻿/*FONT*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+﻿/* FONT */
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Open+Sans&display=swap");
 /* BODY */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 h1, h2, h3 {
-  font-family: "Arima", cursive;
+  font-family: "Arima", cursive !important;
   color: red;
 }
 
@@ -19,9 +18,6 @@ h1, h2, h3 {
 .container-fluid {
   background-color: white;
   border-bottom: 1px solid;
-}
-.container-fluid .button {
-  font-family: "Arima", cursive;
 }
 .container-fluid .button :hover {
   color: #ffaf04;
@@ -38,6 +34,12 @@ h1, h2, h3 {
 }
 
 /* SEZIONE HOME PAGE */
+/*Carousel*/
+.carousel-inner {
+  height: 25em;
+}
+
+/*Card*/
 .card {
   border: none;
 }
@@ -50,11 +52,7 @@ h1, h2, h3 {
   color: red;
 }
 
-/*MAIN*/
-/*main {
-    background-color: #f5f5f5;
-    margin-bottom: 10em;
-}*/
+/*Section*/
 section {
   margin-top: 5em;
   margin-bottom: 5em;
@@ -65,46 +63,30 @@ section {
   justify-content: center;
   width: 80%;
 }
-
-.homeCard {
+section .homeCard {
   height: 50%;
   width: 100%;
 }
-
-.cardContent {
+section .homeCard .cardContent {
   width: 50%;
   padding: 5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(255, 255, 255);
-}
-
-.homeImage {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.cardContent h2, p {
   text-align: center;
-  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
 }
-
-.textGold {
+section .homeCard .cardContent .textGold {
   color: #ccaa55;
 }
-
-.textGrey {
+section .homeCard .cardContent .textGrey {
   color: #808080;
 }
-
-.cardTitle {
+section .homeCard .cardContent .cardTitle {
   font-size: 53px;
   margin-bottom: 1em;
 }
-
-.myBtn {
+section .homeCard .cardContent .myBtn {
   background: #ccaa55;
   border: none;
   padding: 0.5em 2em;
@@ -112,8 +94,8 @@ section {
   color: white;
   margin-top: 1em;
 }
-
-/*Carousel*/
-.carousel-inner {
-  height: 25em;
+section .homeImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

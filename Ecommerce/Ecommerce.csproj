@@ -177,7 +177,7 @@
     <Content Include="Admin\Web.config" />
     <Content Include="LoginC\Web.config" />
     <Content Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults" />
+    <None Include="compilerconfig.json.defaults" />
     <Content Include="Content\StyleSheet1.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

@@ -3,8 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Home page</h1>
-    <%--Carousel--%>
+
+
+
     <div id="Carousel" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -31,6 +32,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+
+
+
 
 
     <div class="d-flex flex-column justify-content-center align-items-center mt-5">
@@ -62,9 +67,9 @@
         </div>
     </div>
 
-    <%--HomeContent--%>
 
-    <%--Card1--%>
+
+
     <section>
         <div class="homeCard d-flex justify-content-center">
             <div class="cardContent">
@@ -82,7 +87,9 @@
                 <asp:Image ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" CssClass="homeImage" />
             </div>
         </div>
-        <%--Card2--%>
+
+
+
         <div class="homeCard d-flex justify-content-center">
 
             <div class="w-50">
