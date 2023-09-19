@@ -22,10 +22,17 @@ h1, h2, h3 {
 }
 
 /* SEZIONE NAVBAR */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .container-fluid {
   font-family: "Arima", cursive !important;
   background-color: white;
   border-bottom: 1px solid;
+  height: 120px;
 }
 .container-fluid .button :hover {
   color: #ffaf04;
@@ -38,7 +45,10 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 120px;
+}
+.container-fluid .centered-logo input {
+  width: 200px;
 }
 
 /* SEZIONE HOME PAGE */
@@ -47,54 +57,93 @@ h1, h2, h3 {
   height: 25em;
 }
 
-/*Card*/
-.card {
-  border: none;
+/*Content*/
+#content .img-title {
+  width: 150px;
 }
-.card .card-text {
-  font-size: 13px;
+
+#content3 .img-title {
+  width: 600px;
 }
-.card .card-body input {
+#content3 input {
   background: none;
   border: 1px solid red;
   color: red;
 }
+#content3 .text-title {
+  background-color: #94052d;
+  width: 100%;
+  height: 4em;
+  margin: 2em 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content3 .text-title h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-/*Section*/
-section {
-  margin-top: 5em;
+#content4 {
+  cursor: pointer;
+}
+#content4 h3 {
+  margin: 0;
+}
+#content4 .card {
+  border: 1px solid black;
+  border-radius: inherit;
+  padding: 1em;
+  display: flex;
+  margin: 1em;
+}
+
+#content5 h2 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+#content5 h3 {
+  font-size: 2em;
+}
+#content5 .card card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#content6 {
   margin-bottom: 5em;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 80%;
 }
-section .homeCard {
+#content6 .homeCard {
   height: 50%;
   width: 100%;
 }
-section .homeCard .cardContent {
-  width: 50%;
-  padding: 5em;
+#content6 .homeCard .cardContent {
+  width: 40%;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(255, 255, 255);
   text-align: center;
 }
-section .homeCard .cardContent .textGold {
+#content6 .homeCard .cardContent .textGold {
   color: #ccaa55;
 }
-section .homeCard .cardContent .textGrey {
+#content6 .homeCard .cardContent .textGrey {
   color: #808080;
 }
-section .homeCard .cardContent .cardTitle {
+#content6 .homeCard .cardContent .cardTitle {
   font-size: 53px;
   margin-bottom: 1em;
 }
-section .homeCard .cardContent .myBtn {
+#content6 .homeCard .cardContent .myBtn {
   background: #ccaa55;
   border: none;
   padding: 0.5em 2em;
@@ -102,9 +151,9 @@ section .homeCard .cardContent .myBtn {
   color: white;
   margin-top: 1em;
 }
-section .homeImage {
-  height: 100%;
-  width: 100%;
+#content6 .homeImage {
+  height: 70%;
+  width: 70%;
   object-fit: cover;
 }
 
@@ -126,4 +175,15 @@ section .homeImage {
 }
 .cartTable td {
   padding: 5px 10px;
+/*Card*/
+.card {
+  border: none;
+}
+.card .card-text {
+  font-size: 18px;
+}
+.card .card-body input {
+  background: none;
+  border: 1px solid red;
+  color: red;
 }
