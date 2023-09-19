@@ -23,7 +23,6 @@
             <div runat="server" id="ErrorLogin">Dati utente errati</div>
             <div class="formContainer mt-5">
                 <h2>Non hai un account? <a href="Register.aspx">Iscriviti</a></h2>
-
             </div>
         </div>
     </form>

@@ -75,9 +75,19 @@ h1, h2, h3 {
     }
 }
 
+#content2 {
+
+}
+
 #content3 {
     .img-title {
         width: 600px;
+    }
+
+    input {
+        background: none;
+        border: 1px solid red;
+        color: red;
     }
 
     .text-title {
@@ -99,33 +109,46 @@ h1, h2, h3 {
     }
 }
 
+#content4 {
+    cursor: pointer;
 
-/*Card*/
-.card {
-    border: none;
-
-    .card-text {
-        font-size: 13px;
+    h3 {
+        margin: 0;
     }
 
-    .card-body {
-        input {
-            background: none;
-            border: 1px solid red;
-            color: red;
+    .card {
+        border: 1px solid black ;
+        border-radius: inherit;
+        padding: 1em;
+        display: flex;
+        margin: 1em;
+    }
+    
+}
+
+#content5 {
+    h2 {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .card {
+        card-body {
+            display: flex;
+            flex-direction:column;
+            justify-content:space-between;
         }
     }
 }
 
-/*Section*/
-section {
-    margin-top: 5em;
+#content6 {
     margin-bottom: 5em;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 80%;
 
     .homeCard {
@@ -133,8 +156,8 @@ section {
         width: 100%;
 
         .cardContent {
-            width: 50%;
-            padding: 5em;
+            width: 40%;
+            padding: 2em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -166,8 +189,26 @@ section {
     }
 
     .homeImage {
-        height: 100%;
-        width: 100%;
+        height: 70%;
+        width: 70%;
         object-fit: cover;
+    }
+}
+
+
+/*Card*/
+.card {
+    border: none;
+
+    .card-text {
+        font-size: 18px;
+    }
+
+    .card-body {
+        input {
+            background: none;
+            border: 1px solid red;
+            color: red;
+        }
     }
 }
