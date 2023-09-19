@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="centered-logo">
-                    <asp:ImageButton ID="ImageButton1" Style="width: 250px" ImageUrl="~/Content/img/logo.png" runat="server" />
+                    <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" runat="server" />
                 </div>
                 <div class="d-flex">
                     <div class="button">
