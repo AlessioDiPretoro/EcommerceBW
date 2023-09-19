@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Prodotti.aspx.cs" Inherits="Ecommerce.Prodotti" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ProdottiCategoria.aspx.cs" Inherits="Ecommerce.ProdottiCategoria" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="text-center my-3">Pagina prodotti</h1>
-    <div class="d-flex justify-content-center align-items-center w-100">
-        <a href="ProdottiCategoria.aspx?idCategoria=1" id="cat1" runat="server" clss="btn btn-primary">Hamburger</a>
-        <a href="ProdottiCategoria.aspx?idCategoria=2" id="cat2" runat="server" clss="btn btn-primary">Bistecche</a>
-        <a href="ProdottiCategoria.aspx?idCategoria=3" id="cat3" runat="server" clss="btn btn-primary">Gastronomia</a>
-        <a href="ProdottiCategoria.aspx?idCategoria=4" id="cat4" runat="server" clss="btn btn-primary">Salumi</a>
-        <a href="ProdottiCategoria.aspx?idCategoria=5" id="cat5" runat="server" clss="btn btn-primary">Altri tagli</a>
+    <div class="d-flex justify-content-evenly align-items-center w-100">
+        <a href="ProdottiCategoria.aspx?idCategoria=1" class="text-decoration-none my-3 btn  bg-transparent" id="cat1" runat="server">Hamburger</a>
+        <a href="ProdottiCategoria.aspx?idCategoria=2" class="text-decoration-none my-3 btn  bg-transparent" id="cat2" runat="server">Bistecche</a>
+        <a href="ProdottiCategoria.aspx?idCategoria=3" class="text-decoration-none my-3 btn  bg-transparent" id="cat3" runat="server">Gastronomia</a>
+        <a href="ProdottiCategoria.aspx?idCategoria=4" class="text-decoration-none my-3 btn  bg-transparent" id="cat4" runat="server">Salumi</a>
+        <a href="ProdottiCategoria.aspx?idCategoria=5" class="text-decoration-none my-3 btn  bg-transparent" id="cat5" runat="server">Altri tagli</a>
+
     </div>
     <div class="container">
         <div class="row row-cols-4">
