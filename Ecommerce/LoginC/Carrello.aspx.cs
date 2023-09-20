@@ -44,10 +44,21 @@ namespace Ecommerce
 
         protected void DeleteThis_Click(object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            GridViewRow gRow = btn.NamingContainer as GridViewRow;
+            int i = gRow.RowIndex;
+            List<Cart> cartList = Session["sessionCart"] as List<Cart>;
+            cartList.RemoveAt(i);
+            Session["cartList"] = cartList;
+            Response.Redirect("Carrello");
         }
 
         protected void DeleteAll_Click(object sender, EventArgs e)
         {
+            List<Cart> cartList = Session["sessionCart"] as List<Cart>;
+            cartList.Clear();
+            Session["cartList"] = cartList;
+            Response.Redirect("Carrello");
         }
     }
 }

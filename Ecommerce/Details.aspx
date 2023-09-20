@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div>
-                           <i class="bi bi-cart btn btn-danger mt-2" <asp:Button ID="AddCart"  runat="server" Text=""   OnClick="AddCart_Click" /> Aggiungi a carrello</i>
+                          <asp:Button ID="AddCart"  runat="server" Text="Aggiungi a carrello"  CssClass="btn btn-danger"  OnClick="AddCart_Click"/>
                         </div>
                     </div>
 

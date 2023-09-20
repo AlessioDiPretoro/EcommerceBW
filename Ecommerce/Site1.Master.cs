@@ -11,7 +11,12 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["sessionCart"] == null)
+            {
+                //  Response.Write("NO sessione");
+                List<Cart> cartListUser = new List<Cart>();
+                Session["sessionCart"] = cartListUser;
+            }
         }
     }
 }
