@@ -114,6 +114,15 @@ namespace Ecommerce
         protected global::System.Web.UI.WebControls.Button Button7;
 
         /// <summary>
+        /// Controllo ModificaProfiloBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ModificaProfiloBtn;
+
+        /// <summary>
         /// Controllo Button9.
         /// </summary>
         /// <remarks>
