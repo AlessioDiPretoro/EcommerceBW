@@ -250,6 +250,8 @@ h1, h2, h3 {
 }
 
 .card-img-top {
+    height: 15em;
+    object-fit: cover;
     transform: scale(1);
     transition: transform .8s;
 }

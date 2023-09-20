@@ -62,10 +62,13 @@
                 <ItemTemplate>
                     <div class="col my-3">
                         <div class="card">
-                            <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
-                            <img src="<%# Item.Copertina %>"
-                                class="card-img-top" alt="...">
+                            <div class="img-container">
+                                <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
+                                    <img src="<%# Item.Copertina %>"
+                                        class="card-img-top" alt="...">
                                 </a>
+                            </div>
+
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <%-- Nome prodotto --%>
