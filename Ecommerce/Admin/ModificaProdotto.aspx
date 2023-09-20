@@ -107,7 +107,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>L'eliminazione del prodotto sarà permanennte e non potrà essere annullata</p>
+                                <p>L'eliminazione del prodotto sarà permanente e non potrà essere annullata</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annulla</button>
