@@ -52,45 +52,65 @@
         </asp:ContentPlaceHolder>
     </form>
 
-    <footer class="container my-5" style="background-color: #deded5;">
+    <footer class="mt-5 w-100" style="background-color: #efefef">
         <div class="container p-4">
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-4">
-                    <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">footer content</h5>
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Mod Town Since 1980</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-            voluptatem veniam, est atque cumque eum delectus sint!
+                        Epicode Carni nasce nel 1980 a Montesarchio in provincia di Benevento, è cresciuta negli anni grazie alla laboriosità di Guido Rossi che oggi, con passione, porta avanti la tradizione di famiglia seguendo le orme del padre Michele e del nonno Tommaso.
+                        <br />
+                        <br />
+
+                        L’azienda ora è dotata di un macello proprio riconosciuto CE, un laboratorio che produce carni di alta qualità e un innovativo e moderno punto vendita.
+                        <br />
+                        <br />
+                        Impegno e costanza sono tutt’oggi le nostre parole d’ordine.
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">links</h5>
                     <ul class="list-unstyled mb-0">
                         <li class="mb-1">
-                            <a href="#!" style="color: #4f4f4f;">Frequently Asked Questions</a>
+                            <a href="#!" style="color: #4f4f4f;">Domande frequenti</a>
                         </li>
                         <li class="mb-1">
-                            <a href="#!" style="color: #4f4f4f;">Delivery</a>
+                            <a href="#!" style="color: #4f4f4f;">Consegna</a>
                         </li>
                         <li class="mb-1">
-                            <a href="#!" style="color: #4f4f4f;">Pricing</a>
+                            <a href="#!" style="color: #4f4f4f;">Prezzi</a>
                         </li>
                         <li>
-                            <a href="#!" style="color: #4f4f4f;">Where we deliver?</a>
+                            <a href="#!" style="color: #4f4f4f;">Dove consegniamo?</a>
                         </li>
+                        <li class="mb-1">
+                            <a href="#!" style="color: #4f4f4f;">Chi siamo</a>
+                        </li>
+                        <li>
+                            <a href="#!" style="color: #4f4f4f;">Politiche di reso</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="#!" style="color: #4f4f4f;">Contattaci</a>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">opening hours</h5>
+                    <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Orario di apertura</h5>
                     <table class="table" style="color: #4f4f4f; border-color: #666;">
                         <tbody>
                             <tr>
-                                <td>Mon - Fri:</td>
-                                <td>8am - 9pm</td>
+                                <td>Lun - Ven:</td>
+                                <td>8:30 - 19:30</td>
+
                             </tr>
                             <tr>
-                                <td>Sat - Sun:</td>
-                                <td>8am - 1am</td>
+                                <td>Sab:</td>
+                                <td>8:30 - 13:30</td>
+                            </tr>
+                            <tr>
+                                <td>dom:</td>
+                                <td>Chiuso</td>
                             </tr>
                         </tbody>
                     </table>
@@ -98,7 +118,7 @@
             </div>
         </div>
 
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3" style="background-color: #e1e1e1">
             © 2023 Copyright:
             <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">Team 4</a>
         </div>
