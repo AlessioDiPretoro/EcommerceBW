@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,7 +18,6 @@ namespace Ecommerce
                     string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
                     SqlConnection conn = new SqlConnection(connectionString);
 
-
                     try
                     {
                         conn.Open();
@@ -25,10 +25,8 @@ namespace Ecommerce
                         cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
                         SqlDataReader reader = cmd.ExecuteReader();
 
-
                         while (reader.Read())
                         {
-                            
                             Image1.ImageUrl = reader["copertina"].ToString();
                             NomeProd.Text = reader["nomeProdotto"].ToString();
                             DescB.Text = reader["descrizioneBreve"].ToString();
@@ -36,18 +34,15 @@ namespace Ecommerce
                             Prezzo.Text = Convert.ToDouble(reader["prezzoBase"]).ToString("C2");
                             Image2.ImageUrl = reader["immagine1"].ToString();
                         }
-
-               
-
-                }
-                catch (Exception ex) { Response.Write(ex.Message); }
-                finally
-                {
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
                     }
-                }
+                    catch (Exception ex) { Response.Write(ex.Message); }
+                    finally
+                    {
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
+                    }
                 }
                 else
                 {
@@ -58,7 +53,6 @@ namespace Ecommerce
 
         protected void AddCart_Click(object sender, EventArgs e)
         {
-
             Product chosenP = new Product();
             int id = Convert.ToInt16(Request.QueryString["idDetails"]);
             foreach (Product p in Product.GetAllProducts())
