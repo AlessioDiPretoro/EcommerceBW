@@ -140,6 +140,7 @@
       <DependentUpon>StyleSheet.css</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Details.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LoginC\Carrello.aspx" />
     <Content Include="LoginC\Dettagli.aspx" />
@@ -240,6 +241,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
