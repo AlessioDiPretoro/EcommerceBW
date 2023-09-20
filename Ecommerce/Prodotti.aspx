@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
     <h1 class="text-center my-3">Pagina prodotti</h1>
 
     <%-- Filtra prodotti --%>
@@ -60,8 +62,10 @@
                 <ItemTemplate>
                     <div class="col my-3">
                         <div class="card">
+                            <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
                             <img src="<%# Item.Copertina %>"
                                 class="card-img-top" alt="...">
+                                </a>
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <%-- Nome prodotto --%>
