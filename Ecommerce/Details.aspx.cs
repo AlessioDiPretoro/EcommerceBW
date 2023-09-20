@@ -15,9 +15,9 @@ namespace Ecommerce
 
         protected void AddCart_Click(object sender, EventArgs e)
         {
-            Product chosenP = new Product();
-            int id = Convert.ToInt16(Request.QueryString["idDetails"]);
-            //foreach (Product p in Product.productList)
+            //Product chosenP = new Product();
+            //int id = Convert.ToInt16(Request.QueryString["idDetails"]);
+            //foreach (Product p in Product.ListaProdotti)
             //{
             //    if (p.Id == id)
             //    {
