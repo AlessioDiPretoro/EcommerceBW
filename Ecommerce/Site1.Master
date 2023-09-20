@@ -14,6 +14,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
         <nav id="navbar" class="navbar-expand-lg">
@@ -50,8 +51,9 @@
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+        
     </form>
-
+    
 
 
     <footer class="container my-5" style="background-color: #deded5;">
@@ -106,7 +108,6 @@
         </div>
     
     </footer>
-
-    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>

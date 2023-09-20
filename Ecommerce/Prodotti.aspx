@@ -60,8 +60,11 @@
                 <ItemTemplate>
                     <div class="col my-3">
                         <div class="card">
-                            <img src="<%# Item.Copertina %>"
-                                class="card-img-top" alt="...">
+                            <div class="img-container">
+                                <img src="<%# Item.Copertina %>"
+                                    class="card-img-top" alt="...">
+                            </div>
+
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <%-- Nome prodotto --%>

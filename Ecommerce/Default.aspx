@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div id="carousel" class="carousel slide">
+    <div id="Carousel" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -118,6 +118,7 @@
                 <div class="col-md-4">
                     <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" />
                 </div>
+            </div>
             </div>
         </div>
 </asp:Content>
