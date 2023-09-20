@@ -54,6 +54,7 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
@@ -89,6 +90,7 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
@@ -124,6 +126,7 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
@@ -179,6 +182,7 @@ namespace Ecommerce
             }
             catch (Exception ex)
             {
+                //Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
 

@@ -3,49 +3,76 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Il tuo carrello</h1>
+    <h1 class="text-center m-4">Carrello</h1>
+    <asp:GridView ID="GridView1" CssClass="table table-hover table-bordered container text-center " runat="server" AutoGenerateColumns="false" ItemType="Ecommerce.Cart">
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Foto</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <img src="<%# Item.Product.Copertina %>" style="max-width: 50px; max-height: 50px" />
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Nome</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <%#Item.Product.NomeProdotto%>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Quantità</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <%#Item.quantity%>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Prezzo cad.</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <%#Item.Product.PrezzoBase%>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Prezzo Totale</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <%#Item.Product.PrezzoBase*Item.quantity%>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Elimina</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <asp:Button ID="DeleteThis" runat="server" Text="X" CssClass="btn btn-danger" OnClick="DeleteThis_Click" />
+                </ItemTemplate>
 
-        <table class="cartTable">
-            <tr>
-                <th></th>
-                <th></th>
-                <th>Prodotto</th>
-                <th>Prezzo</th>
-                <th>Quantità</th>
-                <th>Totale</th>
-            </tr>
-            <tr>
-                <td><i class="bi bi-x-lg"></i></td>
-                <td>
-                    <asp:Image ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/Bistecca-con-osso_1.jpg" runat="server" class="cartImg" /></td>
-                <td>Nome</td>
-                <td>7,60$</td>
-                <td>1</td>
-                <td>7,60$</td>
-            </tr>
-        </table>
+            </asp:TemplateField>
+        </Columns>
 
-
-    <%--    <asp:Repeater ID="Repeater1" runat="server" ItemType="">
-        <HeaderTemplate>
-            <table border="1">
-                <tr>
-                    <th>Prodotto</th>
-                    <th>Prezzo</th>
-                    <th>Quantità</th>
-                    <th>Totale</th>
-                </tr>
-        </HeaderTemplate>
-        <ItemTemplate>
-            <tr>
-                <td>Item.Prodotto</td>
-                <td>Item.Prezzo</td>
-                <td>Item.Quantità</td>
-                <td>Item.Totale</td>
-            </tr>
-        </ItemTemplate>
-        <FooterTemplate>
-            </table>
-        </FooterTemplate>
-    </asp:Repeater>--%>
+    </asp:GridView>
+    <div class="d-flex justify-content-center">
+        <b runat="server" id="totalPrice"></b>
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+        <p runat="server" id="isEmpty"></p>
+        <asp:Button CssClass="btn btn-danger" ID="DeleteAll" runat="server" Text="Svuota carrello" OnClick="DeleteAll_Click" />
+    </div>
 </asp:Content>

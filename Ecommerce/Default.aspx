@@ -33,11 +33,6 @@
         </button>
     </div>
 
-
-
-
-
-
     <div id="content" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <asp:Image ID="Image2" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
         <h2 class="title">Una Macelleria Sotrica a tua disposizione</h2>
@@ -49,13 +44,13 @@
                 <div class="col-md-8">
                     <div class="card-body p-0">
                         <p class="card-text">
-                            Epicode Carni nasce nel 1980 a Montesarchio in provincia di Benevento, 
-                               è cresciuta negli anni grazie alla laboriosità di Guido Rossi che oggi, 
-                               con passione, porta avanti la tradizione di famiglia seguendo le orme del padre Michele 
+                            Epicode Carni nasce nel 1980 a Montesarchio in provincia di Benevento,
+                               è cresciuta negli anni grazie alla laboriosità di Guido Rossi che oggi,
+                               con passione, porta avanti la tradizione di famiglia seguendo le orme del padre Michele
                                e del nonno Tommaso.
                                <br />
                             <br />
-                            L’azienda ora è dotata di un macello proprio riconosciuto CE, 
+                            L’azienda ora è dotata di un macello proprio riconosciuto CE,
                                un laboratorio che produce carni di alta qualità e un innovativo e moderno punto vendita.
                                <br />
                             <br />
@@ -72,9 +67,6 @@
         <img src="Content/Img/Photo_03_rig.png" class="d-block w-100" alt="...">
     </div>
 
-
-
-
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Il nostro prodotto</h2>
         <asp:Button ID="Button4" runat="server" Text="Scopri I Prodotti" />
@@ -83,12 +75,6 @@
             <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>
         </div>
     </div>
-
-
-
-
-
-
 
     <div id="content4" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Prodotti scelti per te</h2>
@@ -116,11 +102,6 @@
         </div>
     </div>
 
-
-
-
-
-
     <div id="content5" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>I Prodotti</h2>
         <div class="card mb-3 w-75">
@@ -141,7 +122,4 @@
                 </div>
             </div>
         </div>
-
-       
-
 </asp:Content>

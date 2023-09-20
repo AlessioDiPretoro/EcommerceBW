@@ -33,16 +33,18 @@ namespace Ecommerce
                 SqlDataReader reader = cmd.ExecuteReader();
                 string userDB = "";
                 string pwDB = "";
+                string isAdmin = "";
                 while (reader.Read())
                 {
                     userDB = reader["username"].ToString();
                     pwDB = reader["password"].ToString();
+                    isAdmin = reader["isAdmin"].ToString();
+                    Session["isAdmin"] = isAdmin;
                 }
 
                 if (_user == userDB && _pw == pwDB)
                 {
                     FormsAuthentication.SetAuthCookie(_user, true);
-                   
                 }
                 else
                 {
@@ -54,10 +56,11 @@ namespace Ecommerce
             {
                 Response.Write(ex.Message);
             }
-            finally {
+            finally
+            {
                 conn.Close();
-            
-            Response.Redirect(FormsAuthentication.DefaultUrl);
+
+                Response.Redirect(FormsAuthentication.DefaultUrl);
             }
         }
     }

@@ -14,50 +14,43 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
-                SqlConnection conn = new SqlConnection(connectionString);
-                
+            string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
 
-                try
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idcategoria=@id", conn);
+                cmd.Parameters.AddWithValue("id", Request.QueryString["idCategoria"]);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<Product> listProducts = new List<Product>();
+
+                while (reader.Read())
                 {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idcategoria=@id", conn);
-                    cmd.Parameters.AddWithValue("id", Request.QueryString["idCategoria"]);
-
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    List<Product> listProducts = new List<Product>();
-
-                    while (reader.Read())
-                    {
-                        Product Product = new Product();
-                        Product.Copertina = reader["copertina"].ToString();
-                        Product.IdProdotto = Convert.ToInt32(reader["idprodotto"]);
-                        Product.NomeProdotto = reader["nomeProdotto"].ToString();
-                        Product.Peso = Convert.ToDouble(reader["peso"]);
-                        Product.DescrizioneBreve = reader["descrizioneBreve"].ToString();
-                        Product.PrezzoBase = Convert.ToDouble(reader["prezzoBase"]);
-                        listProducts.Add(Product);
-
-                    }
-                    Repeater1.DataSource = listProducts;
+                    Product Product = new Product();
+                    Product.Copertina = reader["copertina"].ToString();
+                    Product.IdProdotto = Convert.ToInt32(reader["idprodotto"]);
+                    Product.NomeProdotto = reader["nomeProdotto"].ToString();
+                    Product.Peso = Convert.ToDouble(reader["peso"]);
+                    Product.DescrizioneBreve = reader["descrizioneBreve"].ToString();
+                    Product.PrezzoBase = Convert.ToDouble(reader["prezzoBase"]);
+                    listProducts.Add(Product);
+                }
+                Repeater1.DataSource = listProducts;
                 Repeater1.DataBind();
-
-
-
-                }
-                catch (Exception ex) { Response.Write(ex.Message); }
-                finally
+            }
+            catch (Exception ex) { Response.Write(ex.Message); }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
                 {
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
+                    conn.Close();
                 }
-            
+            }
         }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
@@ -70,7 +63,6 @@ namespace Ecommerce
 
             try
             {
-
                 sql.Open();
 
                 List<Product> ListaProdotti = new List<Product>();
@@ -89,11 +81,10 @@ namespace Ecommerce
                 }
                 Repeater1.DataSource = ListaProdotti;
                 Repeater1.DataBind();
-
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
@@ -109,7 +100,6 @@ namespace Ecommerce
 
             try
             {
-
                 sql.Open();
 
                 List<Product> ListaProdotti = new List<Product>();
@@ -128,11 +118,10 @@ namespace Ecommerce
                 }
                 Repeater1.DataSource = ListaProdotti;
                 Repeater1.DataBind();
-
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
@@ -149,7 +138,6 @@ namespace Ecommerce
 
             try
             {
-
                 sql.Open();
 
                 List<Product> ListaProdotti = new List<Product>();
@@ -168,14 +156,12 @@ namespace Ecommerce
                 }
                 Repeater1.DataSource = ListaProdotti;
                 Repeater1.DataBind();
-
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
         }
-
     }
 }
