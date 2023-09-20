@@ -18,18 +18,16 @@ namespace Ecommerce
             {
 
             string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
-            SqlConnection sql= new SqlConnection(Connection);
+            SqlConnection sql = new SqlConnection(Connection);
 
             SqlCommand cmd = new SqlCommand("select * from prodotti", sql);
             SqlDataReader sqlDataReader;
 
             try
             {
-                
                 sql.Open();
 
-                List<Product> ListaProdotti=new List<Product>();
-                sqlDataReader=cmd.ExecuteReader();
+                sqlDataReader = cmd.ExecuteReader();
 
                 while (sqlDataReader.Read())
                 {
@@ -42,9 +40,6 @@ namespace Ecommerce
                     Product.PrezzoBase = Convert.ToDouble(sqlDataReader["prezzoBase"]);
                     ListaProdotti.Add(Product);
                 }
-                Repeater1.DataSource = ListaProdotti; 
-                Repeater1.DataBind();
-
             }
             catch (Exception ex)
             {
@@ -191,6 +186,4 @@ namespace Ecommerce
         public bool InEvidenza { get; set; }
         public int ScontoPercentuale { get; set; }
     }
-
-    
 }

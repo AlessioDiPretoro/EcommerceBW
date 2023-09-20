@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -17,20 +19,45 @@ namespace Ecommerce
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            string user = userNameLogin.Text;
-            string pw = passwordLogin.Text;
-            string userDB = "";
-            string pwDB = "";
+            string _user = userNameLogin.Text;
+            string _pw = passwordLogin.Text;
 
-            if (user == userDB && pw == pwDB)
+            string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
+            SqlConnection conn = new SqlConnection(Connection);
+
+            try
             {
-                //fare chiamata al db e verificare che sia esistente
-                FormsAuthentication.SetAuthCookie(user, true);
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM anagrafica where username=@user", conn);
+                cmd.Parameters.AddWithValue("user", _user);
+                SqlDataReader reader = cmd.ExecuteReader();
+                string userDB = "";
+                string pwDB = "";
+                while (reader.Read())
+                {
+                    userDB = reader["username"].ToString();
+                    pwDB = reader["password"].ToString();
+                }
+
+                if (_user == userDB && _pw == pwDB)
+                {
+                    FormsAuthentication.SetAuthCookie(_user, true);
+                   
+                }
+                else
+                {
+                    ErrorLogin.Visible = true;
+                }
             }
-            else
+            catch
+                (Exception ex)
             {
-                ErrorLogin.Visible = true;
+                Response.Write(ex.Message);
+            }
+            finally {
+                conn.Close();
+            
+            Response.Redirect(FormsAuthentication.DefaultUrl);
             }
         }
     }
