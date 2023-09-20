@@ -14,7 +14,7 @@ namespace Ecommerce.Admin
         {
             //verifica se lo user è ADMIN
 
-            if (Session["isAdmin"].ToString() != "True")
+            if (Session["isAdmin"] == null || Session["isAdmin"].ToString() != "True")
             {
                 Response.Redirect(FormsAuthentication.DefaultUrl);
             }
