@@ -11,88 +11,79 @@ namespace Ecommerce
 {
 
 
-    public partial class ProdottiCategoria
+    public partial class Details
     {
 
         /// <summary>
-        /// Controllo cat1.
+        /// Controllo Image1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cat1;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Controllo cat2.
+        /// Controllo Image2.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cat2;
+        protected global::System.Web.UI.WebControls.Image Image2;
 
         /// <summary>
-        /// Controllo cat3.
+        /// Controllo NomeProd.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cat3;
+        protected global::System.Web.UI.WebControls.Label NomeProd;
 
         /// <summary>
-        /// Controllo cat4.
+        /// Controllo DescB.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cat4;
+        protected global::System.Web.UI.WebControls.Label DescB;
 
         /// <summary>
-        /// Controllo cat5.
+        /// Controllo DescLu.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cat5;
+        protected global::System.Web.UI.WebControls.Label DescLu;
 
         /// <summary>
-        /// Controllo Button1.
+        /// Controllo DropDownList1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Controllo Button2.
+        /// Controllo Prezzo.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Label Prezzo;
 
         /// <summary>
-        /// Controllo Button3.
+        /// Controllo AddCart.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-
-        /// <summary>
-        /// Controllo Repeater1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Button AddCart;
     }
 }
