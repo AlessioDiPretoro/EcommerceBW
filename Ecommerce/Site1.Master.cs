@@ -62,7 +62,13 @@ namespace Ecommerce
             else
             {
                 Response.Redirect("Login.aspx");
+            if (Session["sessionCart"] == null)
+            {
+                //  Response.Write("NO sessione");
+                List<Cart> cartListUser = new List<Cart>();
+                Session["sessionCart"] = cartListUser;
             }
         }
     }
+}
 }
