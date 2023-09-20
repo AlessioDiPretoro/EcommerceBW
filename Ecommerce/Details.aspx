@@ -36,7 +36,9 @@
                             </div>
                         </div>
                         <div>
-                          <asp:Button ID="AddCart"  runat="server" Text="Aggiungi a carrello"  CssClass="btn btn-danger"  OnClick="AddCart_Click"/>
+                          
+                           <asp:Button ID="AddCart"  runat="server" Text="Aggiungi al carrello 🛒" CssClass="btn btn-danger text-white bg-danger"   OnClick="AddCart_Click" />
+                           
                         </div>
                     </div>
 
