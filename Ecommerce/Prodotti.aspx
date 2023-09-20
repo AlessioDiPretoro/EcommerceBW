@@ -11,7 +11,7 @@
             Filtra
         </button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtri</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -30,42 +30,29 @@
             </div>
         </div>
 
-
-
-
         <%-- Ordina Prodotti --%>
 
         <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">
             Ordina
         </button>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel1">Ordina Prodotti</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <div>
-                    Ordina Per: 
+                    Ordina Per:
                 </div>
                 <div class="d-flex justify-content-between align-items-start flex-column h-25">
-                <asp:Button ID="Button1" CssClass="btn btn-outline-dark"  Text="Nome" runat="server" OnClick="Button1_Click" />
-                <asp:Button ID="Button2" CssClass="btn btn-outline-dark" Text="Prezzo (Dal più basso)" runat="server" OnClick="Button2_Click" />
-                <asp:Button ID="Button3" CssClass="btn btn-outline-dark" Text="Prezzo (Dal più alto)" runat="server" OnClick="Button3_Click" />
+                    <asp:Button ID="Button1" CssClass="btn btn-outline-dark" Text="Nome" runat="server" OnClick="Button1_Click" />
+                    <asp:Button ID="Button2" CssClass="btn btn-outline-dark" Text="Prezzo (Dal più basso)" runat="server" OnClick="Button2_Click" />
+                    <asp:Button ID="Button3" CssClass="btn btn-outline-dark" Text="Prezzo (Dal più alto)" runat="server" OnClick="Button3_Click" />
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <div class="container">
         <div class="row row-cols-4">
