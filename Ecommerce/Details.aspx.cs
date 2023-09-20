@@ -33,6 +33,10 @@ namespace Ecommerce
                             DescLu.Text = reader["descrizioneLunga"].ToString();
                             Prezzo.Text = Convert.ToDouble(reader["prezzoBase"]).ToString("C2");
                             Image2.ImageUrl = reader["immagine1"].ToString();
+                            Image3.ImageUrl = reader["immagine2"].ToString();
+                            Image4.ImageUrl = reader["immagine3"].ToString();
+                            Image5.ImageUrl = reader["immagine4"].ToString();
+
                         }
                     }
                     catch (Exception ex) { Response.Write(ex.Message); }

@@ -11,6 +11,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <nav id="navbar" class="navbar-expand-lg">
+     <div class="container-fluid d-flex justify-content-evenly align-items-center">
+        
+         <div class="centered-logo">
+             <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" PostBackUrl="~/Default.aspx" CausesValidation="false" runat="server" />
+         </div>
+        
+
+     </div>
+ </nav>
         <div class="text-center">
             <div class="formContainer mt-2">
                 <h2>Login page</h2>

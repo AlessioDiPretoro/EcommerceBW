@@ -17,30 +17,30 @@
 <body>
     <form id="form1" runat="server">
         <nav id="navbar" class="navbar-expand-lg">
-            <div class="container-fluid d-flex justify-content-evenly align-items-center">
-                <div class="d-flex ">
+            <div class="container-fluid d-flex justify-content-evenly align-items-center ">
+                <div class="d-flex">
                     <div class="button">
-                        <asp:Button ID="Button1" PostBackUrl="Default.aspx" runat="server" Text="HOME PAGE" />
+                        <asp:Button ID="Button1" PostBackUrl="~/Default.aspx" runat="server" Text="HOME PAGE" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button2" PostBackUrl="Prodotti.aspx" runat="server" Text="I PRODOTTI" />
+                        <asp:Button ID="Button2" PostBackUrl="~/Prodotti.aspx" runat="server" Text="I PRODOTTI" />
                     </div>
                     <div class="button">
                         <asp:Button ID="Button5" PostBackUrl="#" runat="server" Text="CHI SIAMO" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button6" PostBackUrl="Promo.aspx" runat="server" Text="PROMO" />
+                        <asp:Button ID="Button6" PostBackUrl="~/Promo.aspx" runat="server" Text="PROMO" />
                     </div>
-                </div>
+                </div>  
                 <div class="centered-logo">
-                    <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" runat="server" />
+                    <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" PostBackUrl="~/Default.aspx" runat="server" />
                 </div>
                 <div class="d-flex align-items-end">
                     <div class="button">
                         <asp:Button ID="Button3" runat="server" Text="LOGIN" OnClick="Button3_Click" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button4" PostBackUrl="LoginC/Carrello.aspx" runat="server" Text="CARRELLO" />
+                        <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" runat="server" Text="CARRELLO" />
                     </div>
 
 
@@ -51,7 +51,7 @@
                     <ul class="dropdown-menu text-small">
                         <li>
                             <div class="button">
-                                <asp:Button ID="Button7" PostBackUrl="./Admin/NuovoProdotto.aspx" runat="server" Text="AGGIUNGI PRODOTTO" />
+                                <asp:Button ID="Button7" PostBackUrl="~/Admin/NuovoProdotto.aspx" runat="server" Text="AGGIUNGI PRODOTTO" />
                             </div>
                         </li>
                         <li>

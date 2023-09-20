@@ -11,8 +11,14 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["sessionCart"] == null)
+            {
+                //  Response.Write("NO sessione");
+                List<Cart> cartListUser = new List<Cart>();
+                Session["sessionCart"] = cartListUser;
+            }
 
-                Button7.Visible = false;
+            Button7.Visible = false;
                 drop.Visible = false;
                 
             if (Session["isAdmin"] != null )
@@ -61,14 +67,9 @@ namespace Ecommerce
             }
             else
             {
-                Response.Redirect("Login.aspx");
-            if (Session["sessionCart"] == null)
-            {
-                //  Response.Write("NO sessione");
-                List<Cart> cartListUser = new List<Cart>();
-                Session["sessionCart"] = cartListUser;
-            }
+                Response.Redirect("~/Login.aspx");
         }
+           
     }
 }
 }

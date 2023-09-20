@@ -8,9 +8,13 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <asp:Image ID="Image1" CssClass="w-100" runat="server" />
-                    <div class="w-25 my-3">
-
-                        <asp:Image ID="Image2" CssClass="w-100" runat="server" />
+                    <div class="w-25 my-3 d-flex" style="padding-right:0.2em">
+                        
+                        <asp:Image ID="Image2" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image3" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image4" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image5" CssClass="w-100 " runat="server" />
+                        
                     </div>
                 </div>
 
