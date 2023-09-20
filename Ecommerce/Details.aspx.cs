@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -58,7 +59,6 @@ namespace Ecommerce
 
         protected void AddCart_Click(object sender, EventArgs e)
         {
-
             Product chosenP = new Product();
             int id = Convert.ToInt16(Request.QueryString["idDetails"]);
             foreach (Product p in Product.GetAllProducts())
