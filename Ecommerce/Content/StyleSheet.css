@@ -175,6 +175,8 @@ h1, h2, h3 {
 }
 .cartTable td {
   padding: 5px 10px;
+}
+
 /*Card*/
 .card {
   border: none;
