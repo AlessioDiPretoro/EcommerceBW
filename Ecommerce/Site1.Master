@@ -53,8 +53,6 @@
         </asp:ContentPlaceHolder>
         
     </form>
-    
-
 
     <footer class="container my-5" style="background-color: #deded5;">
         <div class="container p-4">
@@ -106,7 +104,7 @@
             © 2023 Copyright:
             <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">Team 4</a>
         </div>
-    
+
     </footer>
     <script src="Scripts/bootstrap.min.js"></script>
 </body>
