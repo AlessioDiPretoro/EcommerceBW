@@ -41,5 +41,13 @@ namespace Ecommerce
                 }
             }
         }
+
+        protected void DeleteThis_Click(object sender, EventArgs e)
+        {
+        }
+
+        protected void DeleteAll_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
