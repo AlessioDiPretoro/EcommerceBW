@@ -8,9 +8,13 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <asp:Image ID="Image1" CssClass="w-100" runat="server" />
-                    <div class="w-25 my-3">
-
-                        <asp:Image ID="Image2" CssClass="w-100" runat="server" />
+                    <div class="w-25 my-3 d-flex" style="padding-right:0.2em">
+                        
+                        <asp:Image ID="Image2" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image3" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image4" CssClass="w-100 me-1" runat="server" />
+                        <asp:Image ID="Image5" CssClass="w-100 " runat="server" />
+                        
                     </div>
                 </div>
 
@@ -36,7 +40,9 @@
                             </div>
                         </div>
                         <div>
-                           <i class="bi bi-cart btn btn-danger mt-2" <asp:Button ID="AddCart"  runat="server" Text=""   OnClick="AddCart_Click" /> Aggiungi a carrello</i>
+                          
+                           <asp:Button ID="AddCart"  runat="server" Text="Aggiungi al carrello 🛒" CssClass="btn btn-danger text-white bg-danger"   OnClick="AddCart_Click" />
+                           
                         </div>
                     </div>
 

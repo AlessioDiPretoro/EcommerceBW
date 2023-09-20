@@ -148,6 +148,7 @@
     <Content Include="Global.asax" />
     <Content Include="Prodotti.aspx" />
     <Content Include="ProdottiCategoria.aspx" />
+    <Content Include="Promo.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Roles\CreateUserWizardWithRoles.aspx" />
     <Content Include="Roles\ManageRoles.aspx" />
@@ -293,6 +294,13 @@
     </Compile>
     <Compile Include="ProdottiCategoria.aspx.designer.cs">
       <DependentUpon>ProdottiCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promo.aspx.cs">
+      <DependentUpon>Promo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promo.aspx.designer.cs">
+      <DependentUpon>Promo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

@@ -33,6 +33,10 @@ namespace Ecommerce
                             DescLu.Text = reader["descrizioneLunga"].ToString();
                             Prezzo.Text = Convert.ToDouble(reader["prezzoBase"]).ToString("C2");
                             Image2.ImageUrl = reader["immagine1"].ToString();
+                            Image3.ImageUrl = reader["immagine2"].ToString();
+                            Image4.ImageUrl = reader["immagine3"].ToString();
+                            Image5.ImageUrl = reader["immagine4"].ToString();
+
                         }
                     }
                     catch (Exception ex) { Response.Write(ex.Message); }
@@ -54,8 +58,9 @@ namespace Ecommerce
         protected void AddCart_Click(object sender, EventArgs e)
         {
             Product chosenP = new Product();
-            int id = Convert.ToInt16(Request.QueryString["idDetails"]);
-            foreach (Product p in Product.GetAllProducts())
+            int id = Convert.ToInt16(Request.QueryString["idprodotto"]);
+            List<Product> productAll = Product.GetAllProducts();
+            foreach (Product p in productAll)
             {
                 if (p.IdProdotto == id)
                 {
@@ -64,11 +69,12 @@ namespace Ecommerce
                 }
             }
             int qty = int.Parse(DropDownList1.SelectedItem.Value);
+
             List<Cart> cartList = Session["sessionCart"] as List<Cart>;
             cartList.Add(new Cart(qty, chosenP));
 
             Session["sessionCart"] = cartList;
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Prodotti.aspx");
         }
     }
 }
