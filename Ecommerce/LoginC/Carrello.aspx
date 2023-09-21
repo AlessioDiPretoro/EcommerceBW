@@ -41,7 +41,7 @@
                     <strong>Prezzo cad.</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <%#Item.Product.PrezzoBase%>
+                    <%#Item.Product.PrezzoBase.ToString("C2")%>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -51,7 +51,7 @@
                     <strong>Prezzo Totale</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <%#Item.Product.PrezzoBase*Item.quantity%>
+                    <%#(Item.Product.PrezzoBase*Item.quantity).ToString("C2")%>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
