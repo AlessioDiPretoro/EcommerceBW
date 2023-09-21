@@ -45,6 +45,20 @@ namespace Ecommerce
                     isAdmin = reader["isAdmin"].ToString();
                     Session["isAdmin"] = isAdmin;
                 }
+
+                if (_user == userDB && _pw == pwDB)
+                {
+                    FormsAuthentication.SetAuthCookie(_user, true);
+                    HttpCookie cookie = new HttpCookie("Id_Cookie");
+                    cookie.Values["id"] = idUtente;
+                    Response.Cookies.Add(cookie);
+                    conn.Close();
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
+                }
+                else
+                {
+                    ErrorLogin.Visible = true;
+                }
             }
             catch
                 (Exception ex)
@@ -54,19 +68,6 @@ namespace Ecommerce
             finally
             {
                 conn.Close();
-
-                if (_user == userDB && _pw == pwDB)
-                {
-                    FormsAuthentication.SetAuthCookie(_user, true);
-                    HttpCookie cookie = new HttpCookie("Id_Cookie");
-                    cookie.Values["id"] = idUtente;
-                    Response.Cookies.Add(cookie);
-                    Response.Redirect(FormsAuthentication.DefaultUrl);
-                }
-                else
-                {
-                    ErrorLogin.Visible = true;
-                }
             }
         }
     }

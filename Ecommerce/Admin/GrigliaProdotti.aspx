@@ -36,6 +36,16 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        <strong>Modifica</strong>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <a href="ModificaProdotto.aspx?idProdotto=<%#Item.IdProdotto %>  " class="btn btn-danger">Modifica</a>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
         </asp:GridView>
     </div>
 </asp:Content>
