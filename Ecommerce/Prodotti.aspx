@@ -92,7 +92,7 @@
                                 <hr />
                                 <p class="card-text ">
                                     <%-- prezzo --%>
-                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
+                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through text-danger" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
                                 </p>
                             </div>
                         </div>
