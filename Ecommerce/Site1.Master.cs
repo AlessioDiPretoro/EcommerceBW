@@ -19,6 +19,7 @@ namespace Ecommerce
             }
 
             Button7.Visible = false;
+            MostraProdottiBtn.Visible = false;
                 drop.Visible = false;
                 
             if (Session["isAdmin"] != null )
@@ -29,6 +30,7 @@ namespace Ecommerce
                 if (Session["isAdmin"].ToString() == "True")
                 {
                     Button7.Visible = true;
+                    MostraProdottiBtn.Visible = true;
                 }
 
             }

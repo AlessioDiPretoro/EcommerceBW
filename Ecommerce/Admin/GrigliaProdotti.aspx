@@ -4,13 +4,38 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-    <h1>Elenco Prodotti</h1>
-    <asp:GridView ID="GridView1" runat="server" CssClass="table table-active table-striped-columns" AutoGenerateColumns="false" ItemType="">
-        <Columns>
-            <asp:TemplateField>
-
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
-        </div>
+        <h1>Elenco Prodotti</h1>
+        <asp:GridView ID="GridView1" runat="server" CssClass="table table-active table-striped-columns" AutoGenerateColumns="false" ItemType="Ecommerce.Product">
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        <strong>Id</strong>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <%# Item.IdProdotto %>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        <strong>Prodotto</strong>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <%# Item.NomeProdotto %>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        <strong>Prezzo</strong>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <%# Item.PrezzoBase.ToString("C2") %>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>
