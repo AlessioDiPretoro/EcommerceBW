@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <h1 class="text-center my-3">Pagina prodotti</h1>
+    <h1 class="text-center my-3">I nostri Prodotti</h1>
 
     <%-- Filtra prodotti --%>
     <div class="d-flex justify-content-end gap-3 align-items-center">
