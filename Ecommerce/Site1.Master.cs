@@ -17,6 +17,16 @@ namespace Ecommerce
                 List<Cart> cartListUser = new List<Cart>();
                 Session["sessionCart"] = cartListUser;
             }
+            else
+            {
+                List<Cart> cartListUserNow = new List<Cart>();
+                cartListUserNow = (List<Cart>)Session["sessionCart"];
+                if (cartListUserNow.Count > 0)
+                {
+                    Notifica.Attributes["class"] = "notifica p-1 bg-danger border border-light rounded-circle";
+                }
+            }
+
 
             Button7.Visible = false;
             MostraProdottiBtn.Visible = false;

@@ -96,6 +96,15 @@ namespace Ecommerce
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
+        /// Controllo Notifica.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Notifica;
+
+        /// <summary>
         /// Controllo drop.
         /// </summary>
         /// <remarks>

@@ -69,7 +69,7 @@
 
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Il nostro prodotto</h2>
-        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Nostri Prodotti" />
+        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Nostri Prodotti" class="butt"/>
         <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
         <div class="text-title">
             <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>
