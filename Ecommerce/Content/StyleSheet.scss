@@ -245,6 +245,14 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
+.promoSticker {
+    position: absolute;
+    width: 55px;
+    right: 5px;
+    top: 10px;
+    z-index: 1;
+}
+
 .card {
     display: block;
     overflow: hidden;

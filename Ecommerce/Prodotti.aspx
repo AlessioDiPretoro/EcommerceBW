@@ -63,6 +63,7 @@
                     <div class="col my-3">
                         <div class="card">
                             <div class="img-container">
+                                <img src="Content/Img/Promo_Sticker.jpg" class="promoSticker" />
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
                                     <img src="<%# Item.Copertina %>"
                                         class="card-img-top" alt="...">

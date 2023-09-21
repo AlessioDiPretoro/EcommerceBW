@@ -128,6 +128,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Img\logo.png" />
     <Content Include="Content\Img\Photo_04_rig.png" />
+    <Content Include="Content\Img\Promo_Sticker.jpg" />
     <Content Include="Content\Img\sede.png" />
     <Content Include="Content\Img\vitello.png" />
     <Content Include="Content\Img\vitello2.png" />
