@@ -15,14 +15,51 @@ namespace Ecommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //verifica se lo user è ADMIN
+            if (!IsPostBack)
+            {
+                //verifica se lo user è ADMIN
 
-            //  if (Session["isAdmin"] == null || Session["isAdmin"].ToString() != "True")
-            // {
-            //     Response.Redirect(FormsAuthentication.DefaultUrl);
-            // }
+                if (Session["isAdmin"] == null || Session["isAdmin"].ToString() != "True")
+                {
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
+                }
 
-            //List<Product> ListaProdotti = new List<Product>();
+                //crea le categorie
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    List<string> listCat = new List<string>();
+                    SqlCommand cmd2 = new SqlCommand(@"SELECT descrizioneCategoria FROM categorie", conn);
+                    SqlDataReader reader = cmd2.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            listCat.Add(reader["descrizioneCategoria"].ToString());
+                        }
+                    }
+                    int i = 0;
+                    foreach (string Cat in listCat)
+                    {
+                        ListItem l = new ListItem(Cat, (i + 1).ToString());
+                        DropDownCategorie.Items.Add(l);
+                    }
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+
+            //carica dati prodotto
             int _id = Convert.ToInt16(Request.QueryString["idProdotto"]);
             string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
             SqlConnection sql = new SqlConnection(Connection);
@@ -40,11 +77,10 @@ namespace Ecommerce.Admin
                 while (sqlDataReader.Read())
                 {
                     NomeProdotto.Text = sqlDataReader["nomeProdotto"].ToString();
-                    // Descrizione.Text = sqlDataReader["nomeProdotto"].ToString();
                     DescrizioneBreve.Text = sqlDataReader["descrizioneBreve"].ToString();
                     DescrizioneLunga.Text = sqlDataReader["descrizioneLunga"].ToString();
                     TipologiaAnimale.Text = sqlDataReader["tipologiaAnimale"].ToString();
-                    //categorie
+                    DropDownCategorie.SelectedIndex = Convert.ToInt16(sqlDataReader["idcategoria"]);//.ToString();
                     PaeseOrigine.Text = sqlDataReader["paeseOrigine"].ToString();
                     Disponiblita.Text = sqlDataReader["disponibile"].ToString();
                     Calendario.Text = sqlDataReader["dataInserimento"].ToString();
@@ -64,39 +100,6 @@ namespace Ecommerce.Admin
                 Response.Write(ex.ToString());
             }
             finally { sql.Close(); }
-
-            string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
-            SqlConnection conn = new SqlConnection(connectionString);
-
-            try
-            {
-                conn.Open();
-                List<string> listCat = new List<string>();
-                SqlCommand cmd2 = new SqlCommand(@"SELECT descrizioneCategoria FROM categorie", conn);
-                SqlDataReader reader = cmd2.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        listCat.Add(reader["descrizioneCategoria"].ToString());
-                    }
-                }
-                int i = 0;
-                foreach (string Cat in listCat)
-                {
-                    ListItem l = new ListItem(Cat, (i + 1).ToString());
-                    DropDownCategorie.Items.Add(l);
-                }
-            }
-            catch (Exception ex) { Response.Write(ex.Message); }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -104,6 +107,7 @@ namespace Ecommerce.Admin
             //modifica prodotto
             string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
+            int _id = Convert.ToInt16(Request.QueryString["idProdotto"]);
             try
             {
                 conn.Open();
@@ -112,8 +116,8 @@ namespace Ecommerce.Admin
                 SqlCommand cmdEdit = new SqlCommand();
 
                 cmdEdit.Connection = conn;
-                cmdEdit.CommandText = "UPDATE prodotti SET prezzoBase=@prezzoBase, peso=@peso, nomeProdotto=@nomeProdotto, tipologiaAnimale=@tipologiaAnimale, paeseOrigine=@paeseOrigine, copertina=@copertina, immagine1=@immagine1, immagine2=@immagine2, immagine3=@immagine3, immagine4=@immagine4, disponibile=@disponibile, dataInserimento=@dataInserimento, inEvidenza=@inEvidenza, sconto=@sconto, idcategoria=@idcategoria, descrizioneBreve=@descrizioneBreve, descrizioneLunga=@descrizioneLunga";
-                cmdEdit.Parameters.AddWithValue("prezzoBase", Prezzo.Text);
+                cmdEdit.CommandText = "UPDATE prodotti SET prezzoBase=@prezzoBase, peso=@peso, nomeProdotto=@nomeProdotto, tipologiaAnimale=@tipologiaAnimale, paeseOrigine=@paeseOrigine, copertina=@copertina, immagine1=@immagine1, immagine2=@immagine2, immagine3=@immagine3, immagine4=@immagine4, disponibile=@disponibile, dataInserimento=@dataInserimento, inEvidenza=@inEvidenza, sconto=@sconto, idcategoria=@idcategoria, descrizioneBreve=@descrizioneBreve, descrizioneLunga=@descrizioneLunga where idprodotto=@idprodotto";
+                cmdEdit.Parameters.AddWithValue("prezzoBase", Convert.ToDouble(Prezzo.Text));
                 cmdEdit.Parameters.AddWithValue("peso", Peso.Text);
                 cmdEdit.Parameters.AddWithValue("nomeProdotto", NomeProdotto.Text);
                 cmdEdit.Parameters.AddWithValue("tipologiaAnimale", TipologiaAnimale.Text);
@@ -130,6 +134,7 @@ namespace Ecommerce.Admin
                 cmdEdit.Parameters.AddWithValue("idcategoria", DropDownCategorie.SelectedItem.Value);
                 cmdEdit.Parameters.AddWithValue("descrizioneBreve", DescrizioneBreve.Text);
                 cmdEdit.Parameters.AddWithValue("descrizioneLunga", DescrizioneLunga.Text);
+                cmdEdit.Parameters.AddWithValue("idprodotto", _id);
 
                 cmdEdit.ExecuteNonQuery();
             }
@@ -158,6 +163,8 @@ namespace Ecommerce.Admin
             cmd.ExecuteNonQuery();
 
             sql.Close();
+
+            Response.Redirect("~/Admin/GrigliaProdotti.aspx");
         }
     }
 }

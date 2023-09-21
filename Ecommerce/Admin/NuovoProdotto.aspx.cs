@@ -18,43 +18,45 @@ namespace Ecommerce.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             //verifica se lo user è ADMIN
-
-            if (Session["isAdmin"] == null || Session["isAdmin"].ToString() != "True")
+            if (!IsPostBack)
             {
-                Response.Redirect(FormsAuthentication.DefaultUrl);
-            }
-
-            //recupera da DB le categorie
-            string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
-            SqlConnection conn = new SqlConnection(connectionString);
-
-            try
-            {
-                conn.Open();
-                List<string> listCat = new List<string>();
-                SqlCommand cmd = new SqlCommand(@"SELECT descrizioneCategoria FROM categorie", conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                if (Session["isAdmin"] == null || Session["isAdmin"].ToString() != "True")
                 {
-                    while (reader.Read())
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
+                }
+
+                //recupera da DB le categorie
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    List<string> listCat = new List<string>();
+                    SqlCommand cmd = new SqlCommand(@"SELECT descrizioneCategoria FROM categorie", conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
                     {
-                        listCat.Add(reader["descrizioneCategoria"].ToString());
+                        while (reader.Read())
+                        {
+                            listCat.Add(reader["descrizioneCategoria"].ToString());
+                        }
+                    }
+                    int i = 0;
+                    foreach (string Cat in listCat)
+                    {
+                        ListItem l = new ListItem(Cat, (i + 1).ToString());
+                        DropDownCategorie.Items.Add(l);
                     }
                 }
-                int i = 0;
-                foreach (string Cat in listCat)
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
                 {
-                    ListItem l = new ListItem(Cat, (i + 1).ToString());
-                    DropDownCategorie.Items.Add(l);
-                }
-            }
-            catch (Exception ex) { Response.Write(ex.Message); }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
