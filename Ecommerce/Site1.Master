@@ -87,12 +87,12 @@
 
     </form>
 
-    <footer class="mt-5 w-100" style="background-color: #efefef">
-        <div class="container p-4">
-            <div class="row">
+    <footer class="mt-5" style="background-color: #efefef; height: 15em;">
+        <div class="container p-4" style="height: 100%;">
+            <div class="row" style="height: 100%">
                 <div class="col-lg-6 col-md-12 mb-4">
                     <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Mod Town Since 1980</h5>
-                    <p>
+                    <p style="font-size: 13px;">
                         Epicode Carni nasce nel 1980 a Montesarchio in provincia di Benevento, è cresciuta negli anni grazie alla laboriosità di Guido Rossi che oggi, con passione, porta avanti la tradizione di famiglia seguendo le orme del padre Michele e del nonno Tommaso.
                         <br />
                         <br />
@@ -110,15 +110,6 @@
                             <a href="#!" style="color: #4f4f4f;">Domande frequenti</a>
                         </li>
                         <li class="mb-1">
-                            <a href="#!" style="color: #4f4f4f;">Consegna</a>
-                        </li>
-                        <li class="mb-1">
-                            <a href="#!" style="color: #4f4f4f;">Prezzi</a>
-                        </li>
-                        <li>
-                            <a href="#!" style="color: #4f4f4f;">Dove consegniamo?</a>
-                        </li>
-                        <li class="mb-1">
                             <a href="#!" style="color: #4f4f4f;">Chi siamo</a>
                         </li>
                         <li>
@@ -127,7 +118,6 @@
                         <li class="mb-1">
                             <a href="#!" style="color: #4f4f4f;">Contattaci</a>
                         </li>
-
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
