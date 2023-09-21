@@ -29,7 +29,7 @@ namespace Ecommerce
                 string postalCode = cap.Text;
                 string userName = username.Text;
                 string password = passwordConf.Text;
-                bool paymentMode = CheckPayment.Checked;
+                bool paymentMode = false;
                 //fare INSERT al db
                 string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
                 SqlConnection conn = new SqlConnection(connectionString);
