@@ -66,11 +66,6 @@ h1, h2, h3 {
 #content3 .img-title {
   width: 600px;
 }
-#content3 input {
-  background: none;
-  border: 1px solid red;
-  color: red;
-}
 #content3 .text-title {
   background-color: #94052d;
   width: 100%;
@@ -108,11 +103,6 @@ h1, h2, h3 {
 }
 #content5 h3 {
   font-size: 2em;
-}
-#content5 .card card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 #content6 {

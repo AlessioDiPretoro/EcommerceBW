@@ -11,10 +11,6 @@
                 <asp:TextBox ID="NomeProdotto" CssClass="form-control my-2" runat="server" placeholder="Nome Prodotto"></asp:TextBox>
             </div>
             <div class="col ">
-                <%-- Descrizione --%>
-                <asp:TextBox ID="Descrizione" CssClass="form-control my-2" runat="server" placeholder="Descrizione"></asp:TextBox>
-            </div>
-            <div class="col ">
                 <%-- Descrizione Breve --%>
                 <asp:TextBox ID="DescrizioneBreve" CssClass="form-control my-2" runat="server" placeholder="Descrizione breve"></asp:TextBox>
             </div>

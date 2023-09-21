@@ -56,7 +56,7 @@
                             <br />
                             Impegno e costanza sono tutt’oggi le nostre parole d’ordine.
                         </p>
-                        <asp:Button ID="Button1" runat="server" Text="Scopri Chi Siamo" />
+                        <asp:Button ID="Button1" CssClass="w-25" runat="server" Text="Scopri Chi Siamo" />
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
 
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Il nostro prodotto</h2>
-        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Prodotti" />
+        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Nostri Prodotti" />
         <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
         <div class="text-title">
             <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>
@@ -80,23 +80,23 @@
         <h2>Prodotti scelti per te</h2>
         <div class="d-flex justify-content-center align-items-center text-center">
             <div class="card" style="width: 18rem;">
-                <asp:Image ID="Image4" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <asp:Image ID="Image4" CssClass="card-img img-title" ImageUrl="https://www.lacasadicarne.it/cdn/shop/products/IMG_5966.jpg?v=1616164698" runat="server" />
                 <div class="card-body">
-                    <h3>Fiorentina</h3>
+                    <h3>Costata black angus</h3>
                 </div>
             </div>
 
             <div class="card" style="width: 18rem;">
-                <asp:Image ID="Image5" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <asp:Image ID="Image5" CssClass="card-img img-title" ImageUrl="https://shop.ilmannarino.it/wp-content/uploads/2023/06/bavarese-costata_marmo_interna.jpg" runat="server" />
                 <div class="card-body">
-                    <h3>Filetto a T</h3>
+                    <h3>Costata bavarese</h3>
                 </div>
             </div>
 
             <div class="card" style="width: 18rem;">
-                <asp:Image ID="Image6" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
+                <asp:Image ID="Image6" CssClass="card-img img-title" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/Bistecca-frollata_1fronte.jpg" runat="server" />
                 <div class="card-body">
-                    <h3>Fette di Scamone</h3>
+                    <h3>Bistecca Frollata di Bovino</h3>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
         <h2>I Prodotti</h2>
         <div class="card mb-3 w-75">
             <div class="row no-gutters">
-                <div class="card-body col-md-8">
+                <div class="card-body col-md-8 d-flex flex-column justify-content-between">
                     <h3>Freschi, cotti o stagionati:<br />
                         più che buoni, semplicemente unici</h3>
                     <div class="card-text">
@@ -115,14 +115,12 @@
                         <br>
                         Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
                     </div>
-                    <asp:Button ID="Button2" runat="server" Text="Scopri di più" />
+                    <asp:Button ID="Button2" CssClass="w-25" runat="server" Text="Scopri di più" />
                 </div>
                 <div class="col-md-4">
-                    <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://falorni.it/wp-content/uploads/2017/12/box_home_prodotti_antica_macelleria_falorni_greve_salumi.jpg" runat="server" />
+                    <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/SalsicciaStagionata_1.jpg" runat="server" />
                 </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
 

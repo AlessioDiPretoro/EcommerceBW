@@ -11,22 +11,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <nav id="navbar" class="navbar-expand-lg">
-     <div class="container-fluid d-flex justify-content-evenly align-items-center">
-        
-         <div class="centered-logo">
-             <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" PostBackUrl="~/Default.aspx" CausesValidation="false" runat="server" />
-         </div>
-        
+        <nav id="navbar" class="navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-evenly align-items-center">
 
-     </div>
- </nav>
+                <div class="centered-logo">
+                    <asp:ImageButton ID="ImageButton1" ImageUrl="~/Content/img/logo.png" PostBackUrl="~/Default.aspx" CausesValidation="false" runat="server" />
+                </div>
+
+            </div>
+        </nav>
         <div class="text-center">
             <div class="formContainer mt-2">
                 <h2>Login page</h2>
                 <asp:TextBox runat="server" placeholder="Username" CssClass="form-control" ID="userNameLogin"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="userNameLogin" runat="server" ErrorMessage="Inserire utente"></asp:RequiredFieldValidator>
-                <asp:TextBox runat="server" placeholder="Password" CssClass="form-control" ID="passwordLogin"></asp:TextBox>
+                <asp:TextBox runat="server" placeholder="Password" TextMode="Password" CssClass="form-control" ID="passwordLogin"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="passwordLogin" runat="server" ErrorMessage="Inserire password"></asp:RequiredFieldValidator>
                 <asp:Button ID="LoginButton" CssClass="btn btn-success" runat="server" Text="Login" OnClick="LoginButton_Click" />
             </div>
