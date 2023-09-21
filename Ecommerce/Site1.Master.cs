@@ -46,31 +46,29 @@ namespace Ecommerce
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            //if (Button9.Text == "LOGOUT" || Button3.Text == "LOGOUT")
-            //{
-            //    Response.Cookies["Id_Cookie"].Expires = DateTime.Now.AddDays(-1);
-            //}
-            //else { DeleteCookies(); }
             DeleteCookies();
         }
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            //if (Button9.Text == "LOGOUT" || Button3.Text == "LOGOUT")
-            //{
-            //    Response.Cookies["Id_Cookie"].Expires = DateTime.Now.AddDays(-1);
-            //} else { DeleteCookies(); }
             DeleteCookies();
         }
 
 
         public void DeleteCookies()
         {
-            if (Request.Cookies[".ASPXAUTH"] != null)
+           
+
+            if (Request.Cookies[".ASPXAUTH"] != null && Request.Cookies["Id_Cookie"] != null)
             {
                 HttpCookie cookie = new HttpCookie(".ASPXAUTH");
                 cookie.Expires = DateTime.Now.AddDays(-1);
                 Response.Cookies.Add(cookie);
+
+                HttpCookie cookie2 = new HttpCookie("Id_Cookie");
+                cookie2.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(cookie2);
+
                 Session.Clear();
                 Response.Redirect("~/Default.aspx");
             }
