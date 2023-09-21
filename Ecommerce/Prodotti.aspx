@@ -58,7 +58,7 @@
 
     <div class="container">
 
-        <div class="row row-cols-4">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
             <asp:Repeater runat="server" ID="Repeater1" ItemType="Ecommerce.Product">
                 <ItemTemplate>
                     <div class="col my-3">
