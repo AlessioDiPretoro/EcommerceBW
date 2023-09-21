@@ -64,7 +64,7 @@
                     <div class="col my-3">
                         <div class="card h-100 d-flex flex-column justify-content-between align-content-between">
                             <div class="img-container">
-                                <img src="Content/Img/Promo_Sticker.jpg" class="promoSticker" />
+                                <img src="Content/Img/Promo_Sticker.png" class="<%#(Item.ScontoPercentuale)>0 ? "promoSticker" : "noPromo" %>"/>
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
                                     <img src="<%# Item.Copertina %>"
                                         class="card-img-top" alt="...">
