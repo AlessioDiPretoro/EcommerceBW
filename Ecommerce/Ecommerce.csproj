@@ -105,6 +105,8 @@
     <Content Include="Admin\GrigliaProdotti.aspx" />
     <Content Include="Admin\ModificaProdotto.aspx" />
     <Content Include="Admin\NuovoProdotto.aspx" />
+    <Content Include="Content\Img\copertina.jpg" />
+    <Content Include="Content\Img\newlogo.png" />
     <Content Include="Content\Img\Photo_01.png" />
     <Content Include="Content\Img\Photo_02.jpg" />
     <Content Include="Content\Img\Photo_03.jpg" />
@@ -126,9 +128,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\Img\logo.png" />
     <Content Include="Content\Img\Photo_04_rig.png" />
-    <Content Include="Content\Img\Promo_Sticker.jpg" />
+    <Content Include="Content\Img\Promo_Sticker.png" />
     <Content Include="Content\Img\sede.png" />
     <Content Include="Content\Img\vitello.png" />
     <Content Include="Content\Img\vitello2.png" />

@@ -14,13 +14,49 @@ h1, h2, h3 {
     color: red;
 }
 
+section {
+    background-color: #d5c2c64d;
+}
+
 
 /* SEZIONE LOGIN */
-.formContainer {
-    display: flex;
-    flex-direction: column;
-    width: 70vh;
-    margin: auto
+#inputlogin {
+    input {
+        background: none;
+        border: 1px solid black;
+        color: red;
+    }
+}
+
+/* SEZIONE REGISTER */
+#inputregister {
+    input {
+        background: none;
+        border: 1px solid black;
+        color: red;
+    }
+}
+
+
+.card {
+    #loginright {
+        background-color: red;
+        color: white;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
 }
 
 /* SEZIONE NAVBAR */
@@ -56,7 +92,8 @@ h1, h2, h3 {
         height: 120px;
 
         input {
-            width: 200px;
+            width: 100px;
+            margin-right: 12em;
         }
     }
 }
@@ -232,6 +269,11 @@ h1, h2, h3 {
             color: red;
         }
     }
+}
+.butt {
+        background: none;
+        border: 1px solid red;
+        color: red;
 }
 
 /* Animazione immagine */
