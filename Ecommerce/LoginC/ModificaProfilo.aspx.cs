@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Security.Policy;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -53,7 +55,7 @@ namespace Ecommerce.LoginC
             }
         }
 
-        protected void EditProf_Click(object sender, EventArgs e)
+        protected async void EditProf_Click(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -84,6 +86,9 @@ namespace Ecommerce.LoginC
                 if (conn.State == ConnectionState.Open)
                 {
                     conn.Close();
+                    Response.Write("Ok utente modificato");
+                    Thread.Sleep(3000);
+                    Response.Redirect("~/Default.aspx");
                 }
             }
         }

@@ -22,6 +22,11 @@ namespace Ecommerce
             string _user = userNameLogin.Text;
             string _pw = passwordLogin.Text;
 
+            string idUtente = "";
+            string userDB = "";
+            string pwDB = "";
+            string isAdmin = "";
+
             string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
             SqlConnection conn = new SqlConnection(Connection);
 
@@ -31,10 +36,7 @@ namespace Ecommerce
                 SqlCommand cmd = new SqlCommand("SELECT * FROM anagrafica where username=@user", conn);
                 cmd.Parameters.AddWithValue("user", _user);
                 SqlDataReader reader = cmd.ExecuteReader();
-                string idUtente = "";
-                string userDB = "";
-                string pwDB = "";
-                string isAdmin = "";
+
                 while (reader.Read())
                 {
                     idUtente = reader["idanagrafica"].ToString();
@@ -42,18 +44,6 @@ namespace Ecommerce
                     pwDB = reader["password"].ToString();
                     isAdmin = reader["isAdmin"].ToString();
                     Session["isAdmin"] = isAdmin;
-                }
-
-                if (_user == userDB && _pw == pwDB)
-                {
-                    FormsAuthentication.SetAuthCookie(_user, true);
-                    HttpCookie cookie = new HttpCookie("Id_Cookie");
-                    cookie.Values["id"] = idUtente;
-                    Response.Cookies.Add(cookie);
-                }
-                else
-                {
-                    ErrorLogin.Visible = true;
                 }
             }
             catch
@@ -65,7 +55,18 @@ namespace Ecommerce
             {
                 conn.Close();
 
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                if (_user == userDB && _pw == pwDB)
+                {
+                    FormsAuthentication.SetAuthCookie(_user, true);
+                    HttpCookie cookie = new HttpCookie("Id_Cookie");
+                    cookie.Values["id"] = idUtente;
+                    Response.Cookies.Add(cookie);
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
+                }
+                else
+                {
+                    ErrorLogin.Visible = true;
+                }
             }
         }
     }

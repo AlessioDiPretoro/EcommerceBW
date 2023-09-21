@@ -32,7 +32,7 @@
             </div>
             <div class="col ">
                 <%-- Password --%>
-                <asp:TextBox ID="Password" CssClass="form-control my-2" runat="server" placeholder="Password"></asp:TextBox>
+                <asp:TextBox ID="Password" CssClass="form-control my-2" TextMode="Password" runat="server" placeholder="Password"></asp:TextBox>
             </div>
 
             <div class="d-flex w-100 justify-content-between">
