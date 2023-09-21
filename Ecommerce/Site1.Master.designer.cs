@@ -105,6 +105,15 @@ namespace Ecommerce
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl drop;
 
         /// <summary>
+        /// Controllo MostraProdottiBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button MostraProdottiBtn;
+
+        /// <summary>
         /// Controllo Button7.
         /// </summary>
         /// <remarks>

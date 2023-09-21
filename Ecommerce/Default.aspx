@@ -35,7 +35,7 @@
 
     <div id="content" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <asp:Image ID="Image2" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello.png" runat="server" />
-        <h2 class="title">Una Macelleria Sotrica a tua disposizione</h2>
+        <h2 class="title">Una Macelleria storica a tua disposizione</h2>
         <div class="card mb-3 w-75">
             <div class="row no-gutters">
                 <div class="col-md-4">

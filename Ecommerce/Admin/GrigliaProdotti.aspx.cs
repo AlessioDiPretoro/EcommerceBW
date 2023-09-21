@@ -18,6 +18,14 @@ namespace Ecommerce.Admin
             {
                 Response.Redirect(FormsAuthentication.DefaultUrl);
             }
+
+            if (!IsPostBack)
+            {
+                List<Product> ListaProdotti1 = new List<Product>();
+                ListaProdotti1 = Product.GetAllProducts();
+                GridView1.DataSource = ListaProdotti1;
+                GridView1.DataBind();
+            }
         }
     }
 }
