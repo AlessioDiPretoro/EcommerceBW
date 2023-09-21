@@ -195,6 +195,13 @@ section {
   padding: 5px 10px;
 }
 
+/*Notifica Carrello*/
+.notifica {
+  position: absolute;
+  right: -4px;
+  top: 0px;
+}
+
 /*Card*/
 .card {
   border: none;
@@ -246,4 +253,10 @@ section {
 .card-img-top:hover {
   transform: scale(1.1);
   transition: transform ease-out 0.8s;
+}
+
+.butt {
+  background: none;
+  border: 1px solid red;
+  color: red;
 }
