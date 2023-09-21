@@ -57,49 +57,49 @@ namespace Ecommerce.Admin
                         conn.Close();
                     }
                 }
-            }
 
-            //carica dati prodotto
-            int _id = Convert.ToInt16(Request.QueryString["idProdotto"]);
-            string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
-            SqlConnection sql = new SqlConnection(Connection);
+                //carica dati prodotto
+                int _id = Convert.ToInt16(Request.QueryString["idProdotto"]);
+                string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
+                SqlConnection sql = new SqlConnection(Connection);
 
-            SqlCommand cmd = new SqlCommand("select * from prodotti WHERE idprodotto=@id", sql);
-            cmd.Parameters.AddWithValue("id", _id);
-            SqlDataReader sqlDataReader;
+                SqlCommand cmd = new SqlCommand("select * from prodotti WHERE idprodotto=@id", sql);
+                cmd.Parameters.AddWithValue("id", _id);
+                SqlDataReader sqlDataReader;
 
-            try
-            {
-                sql.Open();
-
-                sqlDataReader = cmd.ExecuteReader();
-
-                while (sqlDataReader.Read())
+                try
                 {
-                    NomeProdotto.Text = sqlDataReader["nomeProdotto"].ToString();
-                    DescrizioneBreve.Text = sqlDataReader["descrizioneBreve"].ToString();
-                    DescrizioneLunga.Text = sqlDataReader["descrizioneLunga"].ToString();
-                    TipologiaAnimale.Text = sqlDataReader["tipologiaAnimale"].ToString();
-                    DropDownCategorie.SelectedIndex = Convert.ToInt16(sqlDataReader["idcategoria"]);//.ToString();
-                    PaeseOrigine.Text = sqlDataReader["paeseOrigine"].ToString();
-                    Disponiblita.Text = sqlDataReader["disponibile"].ToString();
-                    Calendario.Text = sqlDataReader["dataInserimento"].ToString();
-                    Peso.Text = sqlDataReader["peso"].ToString();
-                    Prezzo.Text = sqlDataReader["prezzoBase"].ToString();
-                    Sconto.Text = sqlDataReader["sconto"].ToString();
-                    Evidenza.Checked = Convert.ToBoolean(sqlDataReader["inEvidenza"].ToString());
-                    ImgCopertina.Text = sqlDataReader["copertina"].ToString();
-                    Img1.Text = sqlDataReader["immagine1"].ToString();
-                    Img2.Text = sqlDataReader["immagine2"].ToString();
-                    Img3.Text = sqlDataReader["immagine3"].ToString();
-                    Img4.Text = sqlDataReader["immagine4"].ToString();
+                    sql.Open();
+
+                    sqlDataReader = cmd.ExecuteReader();
+
+                    while (sqlDataReader.Read())
+                    {
+                        NomeProdotto.Text = sqlDataReader["nomeProdotto"].ToString();
+                        DescrizioneBreve.Text = sqlDataReader["descrizioneBreve"].ToString();
+                        DescrizioneLunga.Text = sqlDataReader["descrizioneLunga"].ToString();
+                        TipologiaAnimale.Text = sqlDataReader["tipologiaAnimale"].ToString();
+                        DropDownCategorie.SelectedIndex = Convert.ToInt16(sqlDataReader["idcategoria"]);//.ToString();
+                        PaeseOrigine.Text = sqlDataReader["paeseOrigine"].ToString();
+                        Disponiblita.Text = sqlDataReader["disponibile"].ToString();
+                        Calendario.Text = sqlDataReader["dataInserimento"].ToString();
+                        Peso.Text = sqlDataReader["peso"].ToString();
+                        Prezzo.Text = sqlDataReader["prezzoBase"].ToString();
+                        Sconto.Text = sqlDataReader["sconto"].ToString();
+                        Evidenza.Checked = Convert.ToBoolean(sqlDataReader["inEvidenza"].ToString());
+                        ImgCopertina.Text = sqlDataReader["copertina"].ToString();
+                        Img1.Text = sqlDataReader["immagine1"].ToString();
+                        Img2.Text = sqlDataReader["immagine2"].ToString();
+                        Img3.Text = sqlDataReader["immagine3"].ToString();
+                        Img4.Text = sqlDataReader["immagine4"].ToString();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.ToString());
+                }
+                finally { sql.Close(); }
             }
-            catch (Exception ex)
-            {
-                Response.Write(ex.ToString());
-            }
-            finally { sql.Close(); }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -114,6 +114,8 @@ namespace Ecommerce.Admin
                 // Response.Write("ok connesso");
 
                 SqlCommand cmdEdit = new SqlCommand();
+
+                string newValue = PaeseOrigine.Text;
 
                 cmdEdit.Connection = conn;
                 cmdEdit.CommandText = "UPDATE prodotti SET prezzoBase=@prezzoBase, peso=@peso, nomeProdotto=@nomeProdotto, tipologiaAnimale=@tipologiaAnimale, paeseOrigine=@paeseOrigine, copertina=@copertina, immagine1=@immagine1, immagine2=@immagine2, immagine3=@immagine3, immagine4=@immagine4, disponibile=@disponibile, dataInserimento=@dataInserimento, inEvidenza=@inEvidenza, sconto=@sconto, idcategoria=@idcategoria, descrizioneBreve=@descrizioneBreve, descrizioneLunga=@descrizioneLunga where idprodotto=@idprodotto";
