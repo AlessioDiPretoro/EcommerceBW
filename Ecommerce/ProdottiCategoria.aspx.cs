@@ -36,6 +36,8 @@ namespace Ecommerce
                     Product.Peso = Convert.ToDouble(reader["peso"]);
                     Product.DescrizioneBreve = reader["descrizioneBreve"].ToString();
                     Product.PrezzoBase = Convert.ToDouble(reader["prezzoBase"]);
+                    Product.InEvidenza = Convert.ToBoolean(reader["inEvidenza"]);
+                    Product.ScontoPercentuale = Convert.ToInt32(reader["sconto"]);
                     listProducts.Add(Product);
                 }
                 Repeater1.DataSource = listProducts;
@@ -77,6 +79,8 @@ namespace Ecommerce
                     Product.Peso = Convert.ToDouble(sqlDataReader["peso"]);
                     Product.DescrizioneBreve = sqlDataReader["descrizioneBreve"].ToString();
                     Product.PrezzoBase = Convert.ToDouble(sqlDataReader["prezzoBase"]);
+                    Product.InEvidenza = Convert.ToBoolean(sqlDataReader["inEvidenza"]);
+                    Product.ScontoPercentuale = Convert.ToInt32(sqlDataReader["sconto"]);
                     ListaProdotti.Add(Product);
                 }
                 Repeater1.DataSource = ListaProdotti;
@@ -114,6 +118,8 @@ namespace Ecommerce
                     Product.Peso = Convert.ToDouble(sqlDataReader["peso"]);
                     Product.DescrizioneBreve = sqlDataReader["descrizioneBreve"].ToString();
                     Product.PrezzoBase = Convert.ToDouble(sqlDataReader["prezzoBase"]);
+                    Product.InEvidenza = Convert.ToBoolean(sqlDataReader["inEvidenza"]);
+                    Product.ScontoPercentuale = Convert.ToInt32(sqlDataReader["sconto"]);
                     ListaProdotti.Add(Product);
                 }
                 Repeater1.DataSource = ListaProdotti;
@@ -152,6 +158,8 @@ namespace Ecommerce
                     Product.Peso = Convert.ToDouble(sqlDataReader["peso"]);
                     Product.DescrizioneBreve = sqlDataReader["descrizioneBreve"].ToString();
                     Product.PrezzoBase = Convert.ToDouble(sqlDataReader["prezzoBase"]);
+                    Product.InEvidenza = Convert.ToBoolean(sqlDataReader["inEvidenza"]);
+                    Product.ScontoPercentuale = Convert.ToInt32(sqlDataReader["sconto"]);
                     ListaProdotti.Add(Product);
                 }
                 Repeater1.DataSource = ListaProdotti;

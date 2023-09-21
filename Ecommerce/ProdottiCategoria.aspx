@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <h1 class="text-center my-3">I nostri Prodotti</h1>
+    <h1 class="text-center my-3">I nostri Prodotti</h1>
 
     <%-- Filtra prodotti --%>
     <div class="d-flex justify-content-end gap-3 align-items-center">
@@ -11,7 +11,7 @@
             Filtra
         </button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtri</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -26,6 +26,7 @@
                     <a href="ProdottiCategoria.aspx?idCategoria=3" id="cat3" runat="server" class="btn btn-outline-dark">Gastronomia</a>
                     <a href="ProdottiCategoria.aspx?idCategoria=4" id="cat4" runat="server" class="btn btn-outline-dark">Salumi</a>
                     <a href="ProdottiCategoria.aspx?idCategoria=5" id="cat5" runat="server" class="btn btn-outline-dark">Altri tagli</a>
+                    <i class="bi bi-trash btn btn-outline-secondary"><a href="Prodotti.aspx" class="text-decoration-none text-black fst-normal" runat="server">Resetta Filtri</a></i>
                 </div>
             </div>
         </div>
@@ -39,7 +40,7 @@
             Ordina
         </button>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel1">Ordina Prodotti</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -58,11 +59,12 @@
     </div>
 
     <div class="container">
+
         <div class="row row-cols-4">
             <asp:Repeater runat="server" ID="Repeater1" ItemType="Ecommerce.Product">
                 <ItemTemplate>
                     <div class="col my-3">
-                        <div class="card">
+                        <div class="card h-100 d-flex flex-column justify-content-between align-content-between">
                             <div class="img-container">
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
                                     <img src="<%# Item.Copertina %>"
@@ -71,24 +73,27 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title" style="height: 3em">
                                     <%-- Nome prodotto --%>
-                                    <%# Item.NomeProdotto %>
+                                    <strong><%# Item.NomeProdotto %></strong>
                                 </h5>
                                 <hr />
                                 <p class="card-text">
                                     <%-- peso --%>
-                                    <%# Item.Peso %>
+                                    <div class="d-flex align-items-center">
+                                        <img style="width: 1em" class="me-2" src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_bilancia_20.png" data-src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_bilancia_20.png">
+                                        <span class="fw-bold text-black-50"><%# Item.Peso%> g</span>
+                                    </div>
                                 </p>
                                 <hr />
-                                <p class="card-text">
+                                <p class="card-tex " style="height: 5em">
                                     <%-- descrizione breve --%>
                                     <%# Item.DescrizioneBreve %>
                                 </p>
                                 <hr />
-                                <p class="card-text">
+                                <p class="card-text ">
                                     <%-- prezzo --%>
-                                    <%# Item.PrezzoBase %>
+                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
                                 </p>
                             </div>
                         </div>

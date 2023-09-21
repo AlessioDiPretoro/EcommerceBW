@@ -6,20 +6,20 @@
 
 
 
-    <div id="Carousel" class="carousel slide">
+    <div id="Carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
+        <div class="carousel-inner h-25">
+            <div class="carousel-item active" data-bs-interval="3000">
                 <img src="Content/Img/Photo_03.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="Content/Img/Photo_04.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="Content/Img/Photo_04.jpg" class="d-block w-100 " alt="...">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item"data-bs-interval="3000">
                 <img src="Content/Img/Photo_02.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
@@ -69,7 +69,7 @@
 
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Il nostro prodotto</h2>
-        <asp:Button ID="Button4" runat="server" Text="Scopri I Prodotti" />
+        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Prodotti" />
         <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
         <div class="text-title">
             <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>

@@ -32,7 +32,7 @@
                                 <asp:ListItem Value="4" Text="4"></asp:ListItem>
                                 <asp:ListItem Value="5" Text="5"></asp:ListItem>
                             </asp:DropDownList>
-                            <em><asp:Label ID="Prezzo" CssClass="ms-4 fs-4 text-secondary text-opacity-50" runat="server" Text="" ></asp:Label></em>
+                            <em><asp:Label ID="Prezzo" CssClass="ms-4 fs-4 text-secondary text-opacity-50  " runat="server" Text=""  ></asp:Label></em>
                         </div>
                         <div>
                             <div>
