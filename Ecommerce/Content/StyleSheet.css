@@ -208,9 +208,27 @@ section {
   color: red;
 }
 
+.butt {
+  background: none;
+  border: 1px solid red;
+  color: red;
+}
+
 /* Animazione immagine */
 .img-container {
   overflow: hidden;
+}
+
+.noPromo {
+  display: none;
+}
+
+.promoSticker {
+  position: absolute;
+  width: 55px;
+  right: 8px;
+  top: 10px;
+  z-index: 1;
 }
 
 .card {

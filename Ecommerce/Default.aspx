@@ -12,9 +12,9 @@
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner h-25">
+        <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Content/Img/Photo_03.jpg" class="d-block w-100" alt="...">
+                <img src="Content/Img/Photo_03.jpg" class="d-block w-100" style="background-size:contain" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
                 <img src="Content/Img/Photo_04.jpg" class="d-block w-100 " alt="...">
@@ -69,7 +69,7 @@
 
     <div id="content3" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Il nostro prodotto</h2>
-        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Prodotti.aspx" Text="Scopri I Nostri Prodotti" />
+        <asp:Button ID="Button4" runat="server" class="butt"  PostBackUrl="~/Prodotti.aspx" Text="Scopri I Nostri Prodotti" />
         <asp:Image ID="Image3" CssClass="card-img img-title" ImageUrl="~/Content/img/vitello_intero.jpg" runat="server" />
         <div class="text-title">
             <h2 class="title">SPEDIZIONE IN TUTTA ITALIA!</h2>
