@@ -30,7 +30,7 @@ namespace Ecommerce
                             double prezzob= Convert.ToDouble(reader["prezzoBase"]);
                             int sconto = Convert.ToInt32(reader["Sconto"]);
 
-                            Image1.ImageUrl = reader["copertina"].ToString();
+                            ImageButton1.ImageUrl = reader["copertina"].ToString();
                             NomeProd.Text = reader["nomeProdotto"].ToString();
                             DescB.Text = reader["descrizioneBreve"].ToString();
                             DescLu.Text = reader["descrizioneLunga"].ToString();
@@ -45,10 +45,10 @@ namespace Ecommerce
                             Prezzo.Text = prezzob.ToString("C2");
 
                             }
-                            Image2.ImageUrl = reader["immagine1"].ToString();
-                            Image3.ImageUrl = reader["immagine2"].ToString();
-                            Image4.ImageUrl = reader["immagine3"].ToString();
-                            Image5.ImageUrl = reader["immagine4"].ToString();
+                            ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                            ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                            ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                            ImageButton5.ImageUrl = reader["immagine4"].ToString();
 
                         }
                     }
@@ -88,6 +88,292 @@ namespace Ecommerce
 
             Session["sessionCart"] = cartList;
             Response.Redirect("Prodotti.aspx");
+        }
+
+        protected void ImageButton2_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            if (Request.QueryString["IdProdotto"] != null)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idprodotto=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        double prezzob = Convert.ToDouble(reader["prezzoBase"]);
+                        int sconto = Convert.ToInt32(reader["Sconto"]);
+
+                        ImageButton1.ImageUrl = reader["immagine1"].ToString();
+                        NomeProd.Text = reader["nomeProdotto"].ToString();
+                        DescB.Text = reader["descrizioneBreve"].ToString();
+                        DescLu.Text = reader["descrizioneLunga"].ToString();
+                        if (reader["inEvidenza"].ToString() == "True")
+                        {
+
+                            prezzob = prezzob - (prezzob * sconto / 100);
+                            Prezzo.Text = prezzob.ToString("C2");
+                        }
+                        else
+                        {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                        }
+                        ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                        ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                        ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                        ImageButton5.ImageUrl = reader["immagine4"].ToString();
+
+                    }
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("Prodotti.aspx");
+            }
+        }
+
+        protected void ImageButton3_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            if (Request.QueryString["IdProdotto"] != null)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idprodotto=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        double prezzob = Convert.ToDouble(reader["prezzoBase"]);
+                        int sconto = Convert.ToInt32(reader["Sconto"]);
+
+
+                        ImageButton1.ImageUrl = reader["immagine2"].ToString();
+
+                      
+                        NomeProd.Text = reader["nomeProdotto"].ToString();
+                        DescB.Text = reader["descrizioneBreve"].ToString();
+                        DescLu.Text = reader["descrizioneLunga"].ToString();
+                        if (reader["inEvidenza"].ToString() == "True")
+                        {
+
+                            prezzob = prezzob - (prezzob * sconto / 100);
+                            Prezzo.Text = prezzob.ToString("C2");
+                        }
+                        else
+                        {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                        }
+                        ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                        ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                        ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                        ImageButton5.ImageUrl = reader["immagine4"].ToString();
+
+                      
+                    }
+                   
+                    
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("Prodotti.aspx");
+            }
+        }
+
+        protected void ImageButton4_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            if (Request.QueryString["IdProdotto"] != null)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idprodotto=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        double prezzob = Convert.ToDouble(reader["prezzoBase"]);
+                        int sconto = Convert.ToInt32(reader["Sconto"]);
+
+                        ImageButton1.ImageUrl = reader["immagine3"].ToString();
+                        NomeProd.Text = reader["nomeProdotto"].ToString();
+                        DescB.Text = reader["descrizioneBreve"].ToString();
+                        DescLu.Text = reader["descrizioneLunga"].ToString();
+                        if (reader["inEvidenza"].ToString() == "True")
+                        {
+
+                            prezzob = prezzob - (prezzob * sconto / 100);
+                            Prezzo.Text = prezzob.ToString("C2");
+                        }
+                        else
+                        {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                        }
+                        ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                        ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                        ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                        ImageButton5.ImageUrl = reader["immagine4"].ToString();
+
+                    }
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("Prodotti.aspx");
+            }
+        }
+
+        protected void ImageButton5_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            if (Request.QueryString["IdProdotto"] != null)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idprodotto=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        double prezzob = Convert.ToDouble(reader["prezzoBase"]);
+                        int sconto = Convert.ToInt32(reader["Sconto"]);
+
+                        ImageButton1.ImageUrl = reader["immagine4"].ToString();
+                        NomeProd.Text = reader["nomeProdotto"].ToString();
+                        DescB.Text = reader["descrizioneBreve"].ToString();
+                        DescLu.Text = reader["descrizioneLunga"].ToString();
+                        if (reader["inEvidenza"].ToString() == "True")
+                        {
+
+                            prezzob = prezzob - (prezzob * sconto / 100);
+                            Prezzo.Text = prezzob.ToString("C2");
+                        }
+                        else
+                        {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                        }
+                        ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                        ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                        ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                        ImageButton5.ImageUrl = reader["immagine4"].ToString();
+
+                    }
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("Prodotti.aspx");
+            }
+        }
+
+        protected void ImageButton1_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            if (Request.QueryString["IdProdotto"] != null)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM prodotti where idprodotto=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Request.QueryString["IdProdotto"]);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        double prezzob = Convert.ToDouble(reader["prezzoBase"]);
+                        int sconto = Convert.ToInt32(reader["Sconto"]);
+
+                        ImageButton1.ImageUrl = reader["copertina"].ToString();
+                        NomeProd.Text = reader["nomeProdotto"].ToString();
+                        DescB.Text = reader["descrizioneBreve"].ToString();
+                        DescLu.Text = reader["descrizioneLunga"].ToString();
+                        if (reader["inEvidenza"].ToString() == "True")
+                        {
+
+                            prezzob = prezzob - (prezzob * sconto / 100);
+                            Prezzo.Text = prezzob.ToString("C2");
+                        }
+                        else
+                        {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                        }
+                        ImageButton2.ImageUrl = reader["immagine1"].ToString();
+                        ImageButton3.ImageUrl = reader["immagine2"].ToString();
+                        ImageButton4.ImageUrl = reader["immagine3"].ToString();
+                        ImageButton5.ImageUrl = reader["immagine4"].ToString();
+
+                    }
+                }
+                catch (Exception ex) { Response.Write(ex.Message); }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("Prodotti.aspx");
+            }
         }
     }
 }
