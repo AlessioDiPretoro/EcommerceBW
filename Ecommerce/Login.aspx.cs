@@ -52,7 +52,6 @@ namespace Ecommerce
                     HttpCookie cookie = new HttpCookie("Id_Cookie");
                     cookie.Values["id"] = idUtente;
                     Response.Cookies.Add(cookie);
-                    conn.Close();
                     Response.Redirect(FormsAuthentication.DefaultUrl);
                 }
                 else
@@ -68,6 +67,7 @@ namespace Ecommerce
             finally
             {
                 conn.Close();
+               // Response.Redirect(FormsAuthentication.DefaultUrl);
             }
         }
     }
