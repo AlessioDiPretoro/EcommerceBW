@@ -233,6 +233,17 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
+.noPromo {
+    display: none;
+}
+.promoSticker {
+    position: absolute;
+    width: 55px;
+    right: 8px;
+    top: 10px;
+    z-index: 1;
+}
+
 .card {
     display: block;
     overflow: hidden;
