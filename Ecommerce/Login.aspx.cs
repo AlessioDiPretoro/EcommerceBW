@@ -22,6 +22,11 @@ namespace Ecommerce
             string _user = userNameLogin.Text;
             string _pw = passwordLogin.Text;
 
+            string idUtente = "";
+            string userDB = "";
+            string pwDB = "";
+            string isAdmin = "";
+
             string Connection = ConfigurationManager.ConnectionStrings["DB_ConnString"].ConnectionString.ToString();
             SqlConnection conn = new SqlConnection(Connection);
 
@@ -31,10 +36,7 @@ namespace Ecommerce
                 SqlCommand cmd = new SqlCommand("SELECT * FROM anagrafica where username=@user", conn);
                 cmd.Parameters.AddWithValue("user", _user);
                 SqlDataReader reader = cmd.ExecuteReader();
-                string idUtente = "";
-                string userDB = "";
-                string pwDB = "";
-                string isAdmin = "";
+
                 while (reader.Read())
                 {
                     idUtente = reader["idanagrafica"].ToString();
@@ -50,6 +52,8 @@ namespace Ecommerce
                     HttpCookie cookie = new HttpCookie("Id_Cookie");
                     cookie.Values["id"] = idUtente;
                     Response.Cookies.Add(cookie);
+                    conn.Close();
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
                 }
                 else
                 {
@@ -64,8 +68,6 @@ namespace Ecommerce
             finally
             {
                 conn.Close();
-
-                Response.Redirect(FormsAuthentication.DefaultUrl);
             }
         }
     }

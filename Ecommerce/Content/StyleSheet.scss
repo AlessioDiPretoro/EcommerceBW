@@ -85,11 +85,7 @@ h1, h2, h3 {
         width: 600px;
     }
 
-    input {
-        background: none;
-        border: 1px solid red;
-        color: red;
-    }
+
 
     .text-title {
         background-color: #94052d;
@@ -135,14 +131,6 @@ h1, h2, h3 {
 
     h3 {
         font-size: 2em;
-    }
-
-    .card {
-        card-body {
-            display: flex;
-            flex-direction:column;
-            justify-content:space-between;
-        }
     }
 }
 
@@ -269,3 +257,4 @@ h1, h2, h3 {
     transform: scale(1.1);
     transition: transform ease-out .8s; 
 }
+

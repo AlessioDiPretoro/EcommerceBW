@@ -57,11 +57,12 @@
     </div>
 
     <div class="container">
+
         <div class="row row-cols-4">
             <asp:Repeater runat="server" ID="Repeater1" ItemType="Ecommerce.Product">
                 <ItemTemplate>
                     <div class="col my-3">
-                        <div class="card">
+                        <div class="card h-100 d-flex flex-column justify-content-between align-content-between">
                             <div class="img-container">
                                 <img src="Content/Img/Promo_Sticker.jpg" class="promoSticker" />
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
@@ -71,24 +72,27 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title" style="height: 3em">
                                     <%-- Nome prodotto --%>
-                                    <%# Item.NomeProdotto %>
+                                    <strong><%# Item.NomeProdotto %></strong>
                                 </h5>
                                 <hr />
                                 <p class="card-text">
                                     <%-- peso --%>
-                                    <%# Item.Peso %>
+                                    <div class="d-flex align-items-center">
+                                        <img style="width: 1em" class="me-2" src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_bilancia_20.png" data-src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_bilancia_20.png">
+                                        <span class="fw-bold text-black-50"><%# Item.Peso%> g</span>
+                                    </div>
                                 </p>
                                 <hr />
-                                <p class="card-text">
+                                <p class="card-tex " style="height: 5em">
                                     <%-- descrizione breve --%>
                                     <%# Item.DescrizioneBreve %>
                                 </p>
                                 <hr />
-                                <p class="card-text">
+                                <p class="card-text ">
                                     <%-- prezzo --%>
-                                    <%# Item.PrezzoBase %>
+                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
                                 </p>
                             </div>
                         </div>

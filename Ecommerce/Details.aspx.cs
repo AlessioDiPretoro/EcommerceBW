@@ -27,11 +27,24 @@ namespace Ecommerce
 
                         while (reader.Read())
                         {
+                            double prezzob= Convert.ToDouble(reader["prezzoBase"]);
+                            int sconto = Convert.ToInt32(reader["Sconto"]);
+
                             Image1.ImageUrl = reader["copertina"].ToString();
                             NomeProd.Text = reader["nomeProdotto"].ToString();
                             DescB.Text = reader["descrizioneBreve"].ToString();
                             DescLu.Text = reader["descrizioneLunga"].ToString();
-                            Prezzo.Text = Convert.ToDouble(reader["prezzoBase"]).ToString("C2");
+                            if (reader["inEvidenza"].ToString() == "True")
+                            {
+                               
+                                prezzob = prezzob-( prezzob * sconto / 100);
+                                Prezzo.Text= prezzob.ToString("C2");
+                            }
+                            else
+                            {
+                            Prezzo.Text = prezzob.ToString("C2");
+
+                            }
                             Image2.ImageUrl = reader["immagine1"].ToString();
                             Image3.ImageUrl = reader["immagine2"].ToString();
                             Image4.ImageUrl = reader["immagine3"].ToString();

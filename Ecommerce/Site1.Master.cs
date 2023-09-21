@@ -86,7 +86,7 @@ namespace Ecommerce
             if (Request.Cookies["Id_Cookie"] != null)
             {
                 string id = Request.Cookies["Id_Cookie"]["id"];
-                Response.Redirect($"LoginC/ModificaProfilo?IdProfilo={id}");
+                Response.Redirect($"~/LoginC/ModificaProfilo?IdProfilo={id}");
             }
         }
     }

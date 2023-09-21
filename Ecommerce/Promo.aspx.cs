@@ -35,7 +35,9 @@ namespace Ecommerce
                     Product.NomeProdotto = reader["nomeProdotto"].ToString();
                     Product.Peso = Convert.ToDouble(reader["peso"]);
                     Product.DescrizioneBreve = reader["descrizioneBreve"].ToString();
+                    Product.ScontoPercentuale = Convert.ToInt32(reader["sconto"]);
                     Product.PrezzoBase = Convert.ToDouble(reader["prezzoBase"]);
+                    //double tot = Product.PrezzoBase * Product.ScontoPercentuale / 100;
                     listProducts.Add(Product);
                 }
                 Repeater1.DataSource = listProducts;
