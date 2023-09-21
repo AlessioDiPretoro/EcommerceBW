@@ -55,7 +55,9 @@ namespace Ecommerce
                     int affectedRows = cmdInsert.ExecuteNonQuery();
                     if (affectedRows != 0)
                     {
+                        conn.Close();
                         Response.Write("ok nuovo utente");
+                        Response.Redirect("~/Default.aspx");
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
