@@ -58,12 +58,13 @@
 
     <div class="container">
 
-        <div class="row row-cols-4">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
             <asp:Repeater runat="server" ID="Repeater1" ItemType="Ecommerce.Product">
                 <ItemTemplate>
                     <div class="col my-3">
                         <div class="card h-100 d-flex flex-column justify-content-between align-content-between">
                             <div class="img-container">
+                                <img src="Content/Img/Promo_Sticker.png" class="<%#(Item.ScontoPercentuale)>0 ? "promoSticker" : "noPromo" %>"/>
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
                                     <img src="<%# Item.Copertina %>"
                                         class="card-img-top" alt="...">
@@ -91,7 +92,7 @@
                                 <hr />
                                 <p class="card-text ">
                                     <%-- prezzo --%>
-                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
+                                    <strong class="<%#(Item.ScontoPercentuale)>0 ? "text-decoration-line-through text-danger" : "text-decoration-none" %>"><%#  Item.PrezzoBase.ToString("C2")%></strong> <span><strong class="<%#(Item.ScontoPercentuale)>0 ? "" : "d-none" %>"><%#(Item.PrezzoBase-(Item.PrezzoBase*Item.ScontoPercentuale/100)).ToString("C2")%></strong></span>
                                 </p>
                             </div>
                         </div>
