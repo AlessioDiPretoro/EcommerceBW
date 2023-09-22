@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container p-5">
         <h1 class="text-center mb-2">Modifica Prodotti</h1>
+            <h2 runat="server" class="alert alert-info" id="OkModificato">Prodotto modificato</h2>
         <div class="row row-cols-2 px-5">
             <div class="col">
                 <%-- Nome Prodotto --%>
@@ -88,6 +89,7 @@
             </div>
             <div class="d-flex w-100 justify-content-between">
                 <asp:Button ID="Button1" Text="Modifica Prodotto" CssClass="btn btn-warning my-3 w-25" runat="server" OnClick="Button1_Click" />
+                
 
                 <%-- Modale bottone elimina prodotto --%>
                 <button type="button" class="btn btn-danger my-3 w-25" data-bs-toggle="modal" data-bs-target="#exampleModal">

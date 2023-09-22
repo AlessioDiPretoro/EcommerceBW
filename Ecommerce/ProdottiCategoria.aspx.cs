@@ -14,6 +14,12 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["IdProdotto"] == null)
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+
+
             string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
