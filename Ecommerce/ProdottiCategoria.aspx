@@ -93,7 +93,7 @@
                         <div class="card h-100 d-flex flex-column justify-content-between align-content-between">
                             <div class="img-container">
                                 <a href="Details.aspx?idprodotto=<%# Item.IdProdotto %>">
-                                    <img src="<%# Item.Copertina %>"
+                                    <img src="<%# Item.Copertina %> " 
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>

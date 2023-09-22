@@ -56,7 +56,7 @@
                             <br />
                             Impegno e costanza sono tutt’oggi le nostre parole d’ordine.
                         </p>
-                        <asp:Button ID="Button1" CssClass="w-25" runat="server" Text="Scopri Chi Siamo" />
+                        <asp:Button ID="Button1" runat="server" Text="Scopri Chi Siamo" />
                     </div>
                 </div>
             </div>
@@ -78,24 +78,30 @@
 
     <div id="content4" class="d-flex flex-column justify-content-center align-items-center mt-5">
         <h2>Prodotti scelti per te</h2>
-        <div class="d-flex justify-content-center align-items-center text-center">
-            <div class="card" style="width: 18rem;">
+        <div class="d-flex justify-content-center align-items-center text-center row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col card" style="width: 18rem;">
+                 <div class="img-container">
                 <asp:Image ID="Image4" CssClass="card-img img-title" ImageUrl="https://www.lacasadicarne.it/cdn/shop/products/IMG_5966.jpg?v=1616164698" runat="server" />
-                <div class="card-body">
+                </div>
+                     <div class="card-body">
                     <h3>Costata black angus</h3>
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="col card" style="width: 18rem;">
+                 <div class="img-container">
                 <asp:Image ID="Image5" CssClass="card-img img-title" ImageUrl="https://shop.ilmannarino.it/wp-content/uploads/2023/06/bavarese-costata_marmo_interna.jpg" runat="server" />
-                <div class="card-body">
+                </div>
+                     <div class="card-body">
                     <h3>Costata bavarese</h3>
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="col card" style="width: 18rem;">
+                 <div class="img-container">
                 <asp:Image ID="Image6" CssClass="card-img img-title" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/Bistecca-frollata_1fronte.jpg" runat="server" />
-                <div class="card-body">
+                </div>
+                     <div class="card-body">
                     <h3>Bistecca Frollata di Bovino</h3>
                 </div>
             </div>
@@ -115,7 +121,7 @@
                         <br>
                         Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
                     </div>
-                    <asp:Button ID="Button2" CssClass="w-25" runat="server" Text="Scopri di più" />
+                    <asp:Button ID="Button2" runat="server" Text="Scopri di più" />
                 </div>
                 <div class="col-md-4">
                     <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/SalsicciaStagionata_1.jpg" runat="server" />
