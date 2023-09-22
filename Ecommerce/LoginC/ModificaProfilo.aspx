@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container p-5">
         <h1 class="text-center mb-2">Modifica Profilo</h1>
-        <div class="row row-cols-2 px-5">
+        <div class="row row-cols-1 row-cols-lg-2 px-5">
             <div class="col">
                 <%-- Nome --%>
                 <asp:TextBox ID="Nome" CssClass="form-control my-2" runat="server" placeholder="Nome"></asp:TextBox>

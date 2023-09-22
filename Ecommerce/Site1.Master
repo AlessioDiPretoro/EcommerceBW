@@ -23,7 +23,7 @@
                         <asp:Button ID="Button1" PostBackUrl="~/Default.aspx" runat="server" Text="HOME PAGE" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button2" PostBackUrl="~/Prodotti.aspx" runat="server" Text="I PRODOTTI" />
+                        <asp:Button ID="Button2" PostBackUrl="~/Prodotti.aspx" runat="server" Text="PRODOTTI" />
                     </div>
                     <div class="button">
                         <asp:Button ID="Button5" PostBackUrl="~/Noi.aspx" runat="server" Text="CHI SIAMO" />
@@ -44,12 +44,19 @@
                         <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" runat="server" Text="CARRELLO" />
                         <span id="Notifica" class="" runat="server"></span>
                     </div>
+                    <div class="button">
+                        <p id="nome" class="m-0 px-1 ps-3" runat="server"></p>
+                    </div>
 
 
-                    <div id="drop" runat="server" class="dropdown text-end ps-4">
+                    <div id="drop" runat="server" class="dropdown text-end ps-2">
+
                         <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+
                             <i class="bi bi-person-circle text-secondary"></i>
+
                         </a>
+
                         <ul class="dropdown-menu text-small">
                             <li>
                                 <div class="button">
@@ -78,6 +85,7 @@
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </nav>

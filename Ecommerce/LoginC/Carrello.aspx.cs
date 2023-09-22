@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -38,6 +39,7 @@ namespace Ecommerce
                 {
                     isEmpty.InnerHtml = "carrello vuoto";
                     DeleteAll.Visible = false;
+                    Button1.Visible = false;
                 }
             }
         }
@@ -59,6 +61,21 @@ namespace Ecommerce
             cartList.Clear();
             Session["cartList"] = cartList;
             Response.Redirect("Carrello");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            checkout.InnerHtml = $"<h1>Grazie per il tuo acquisto</h1>" +
+                $"<h2>Stai per essere reindirizzato alla pagina per il pagamento</h2>" +
+                $"<div class='spinner-grow text-danger' role='status'><span class='visually-hidden'>Loading...</span></div>";
+            List<Cart> cartList = Session["sessionCart"] as List<Cart>;
+            cartList.Clear();
+            Session["cartList"] = cartList;
+
+
+            Response.AppendHeader("Refresh", "5;url=Carrello.aspx");
+
         }
     }
 }

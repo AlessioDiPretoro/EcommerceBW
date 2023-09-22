@@ -5,33 +5,32 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="text-center my-3">I nostri Prodotti</h1>
     <div class="container">
-           <div id="Carousel" class="carousel slide mb-5" data-bs-ride="carousel">
-       <div class="carousel-indicators">
-           <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-           <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-           <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-       </div>
-       <div class="carousel-inner">
-           <div class="carousel-item active" data-bs-interval="3000">
-               <img src="Content/Img/Photo_03.jpg" class="d-block w-100" style="background-size: contain" alt="...">
-           </div>
-           <div class="carousel-item" data-bs-interval="3000">
-               <img src="Content/Img/Photo_04.jpg" class="d-block w-100 " alt="...">
-           </div>
-           <div class="carousel-item" data-bs-interval="3000">
-               <img src="Content/Img/Photo_02.jpg" class="d-block w-100" alt="...">
-           </div>
-       </div>
-       <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
-           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Previous</span>
-       </button>
-       <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
-           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Next</span>
-       </button>
-   </div>
-    <%-- Filtra prodotti --%>
+        <div id="Carousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+              <img src="Content/Img/SLIDE_1.jpg" class="d-block w-100" style="background-size: contain" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+              <img src="Content/Img/SLIDE_2.jpg" class="d-block w-100 " alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+              <img src="Content/Img/SLIDE_3.jpg" class="d-block w-100" alt="...">
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
     <div class="d-flex justify-content-end gap-3 align-items-center">
         <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             Filtra

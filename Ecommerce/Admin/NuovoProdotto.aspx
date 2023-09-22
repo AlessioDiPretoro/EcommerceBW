@@ -6,7 +6,7 @@
     <div class="container p-5">
         <h1 class="text-center mb-2">Aggiungi Prodotti</h1>
         <h2 runat="server" class="alert alert-info" id="OkModificato">Prodotto aggiunto</h2>
-        <div class="row row-cols-2 px-5">
+        <div class="row row-cols-1 row-cols-lg-2 px-5">
             <div class="col">
                 <%-- Nome Prodotto --%>
                 <asp:TextBox ID="NomeProdotto" CssClass="form-control my-2" runat="server" placeholder="Nome Prodotto"></asp:TextBox>

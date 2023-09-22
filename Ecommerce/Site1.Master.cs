@@ -28,7 +28,7 @@ namespace Ecommerce
                 }
             }
 
-
+            nome.Visible = false;
             Button7.Visible = false;
             MostraProdottiBtn.Visible = false;
                 drop.Visible = false;
@@ -49,8 +49,10 @@ namespace Ecommerce
 
             if (Request.Cookies[".ASPXAUTH"]!=null)
             {
-                Button9.Text = "LOGOUT"; 
-                Button3.Text = "LOGOUT";
+                nome.InnerText=$"CIAO {HttpContext.Current.User.Identity.Name}";
+                Button9.Text = "LOGOUT";
+                Button3.Visible = false;
+                nome.Visible= true;
                 drop.Visible = true;
 
             }
