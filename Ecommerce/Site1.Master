@@ -45,7 +45,7 @@
                         <span id="Notifica" class="" runat="server"></span>
                     </div>
                     <div class="button">
-                        <p id="nome" class="m-0 px-1 ps-3" runat="server"></p>
+                        <p id="nome" class="m-0 px-1 ms-4" runat="server"></p>
                     </div>
 
 
