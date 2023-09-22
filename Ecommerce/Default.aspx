@@ -75,37 +75,7 @@
     </div>
 
 
-    <h2 class="text-center">Prodotti scelti per te</h2>
-    <div class="container m-auto row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-        <div class="col my-3">
-            <div class="card h-100 d-flex flex-column justify-content-between align-content-between border border-1 border-dark">
-                <div class="img-container">
-                    <asp:Image ID="Image4" CssClass="card-img img-title card-img-top" ImageUrl="https://www.lacasadicarne.it/cdn/shop/products/IMG_5966.jpg?v=1616164698" runat="server" />
-                </div>
-                     <div class="card-body">
-                    <h3>Costata black angus</h3>
-                </div>
-            </div>
-
-            <div class="col card" style="width: 18rem;">
-                 <div class="img-container">
-                <asp:Image ID="Image5" CssClass="card-img img-title" ImageUrl="https://shop.ilmannarino.it/wp-content/uploads/2023/06/bavarese-costata_marmo_interna.jpg" runat="server" />
-                </div>
-                     <div class="card-body">
-                    <h3>Costata bavarese</h3>
-                </div>
-            </div>
-
-            <div class="col card" style="width: 18rem;">
-                 <div class="img-container">
-                <asp:Image ID="Image6" CssClass="card-img img-title" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/Bistecca-frollata_1fronte.jpg" runat="server" />
-                </div>
-                     <div class="card-body">
-                    <h3>Bistecca Frollata di Bovino</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
 
     <div id="content5" class="d-flex flex-column justify-content-center align-items-center">
