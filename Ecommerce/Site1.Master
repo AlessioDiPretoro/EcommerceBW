@@ -14,14 +14,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <!-- Navbar -->
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Container wrapper -->
             <div class="container-fluid p-5">
-                <!-- Navbar brand -->
                 <asp:ImageButton ID="ImageButton1" runat="server" CssClass="img-fluid" PostBackUrl="~/Default.aspx" ImageUrl="~/Content/Img/newlogo.png" />
-                <!-- Toggle button -->
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -32,10 +27,8 @@
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
-
-                <!-- Collapsible wrapper -->
                 <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                    <!-- Left links -->
+                    >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item button">
                             <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link button" PostBackUrl="~/Prodotti.aspx">Prodotti</asp:LinkButton>
@@ -47,8 +40,6 @@
                             <asp:LinkButton ID="LinkButton3" runat="server" CssClass="nav-link button" PostBackUrl="~/Promo.aspx">Promo</asp:LinkButton>
                         </li>
                     </ul>
-                    <!-- Left links -->
-
                     <div class="d-flex align-items-center">
                         <div class="button position-relative">
                             <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" CssClass="button" runat="server" Text="Carrello" />
@@ -99,9 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Collapsible wrapper -->
             </div>
-            <!-- Container wrapper -->
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
@@ -135,7 +124,6 @@
                             <tr>
                                 <td>Lun - Ven:</td>
                                 <td>8:30 - 19:30</td>
-
                             </tr>
                             <tr>
                                 <td>Sab:</td>
@@ -148,7 +136,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Dove Siamo</h5>
                     <table class="table" style="color: #4f4f4f; border-color: #666;">
@@ -181,9 +168,9 @@
                 <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">epicodecarni.it</a>
             </div>
         </div>
-
     </footer>
 
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

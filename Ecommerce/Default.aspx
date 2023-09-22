@@ -82,7 +82,7 @@
                     <asp:Image ID="Image4" CssClass="card-img img-title card-img-top" ImageUrl="https://www.lacasadicarne.it/cdn/shop/products/IMG_5966.jpg?v=1616164698" runat="server" />
                 </div>
 
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-center align-items-center">
                     <h3 class="card-title" style="height: 3em">Costata black angus</h3>
                 </div>
             </div>
