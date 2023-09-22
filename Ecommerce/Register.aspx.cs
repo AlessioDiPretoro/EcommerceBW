@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace Ecommerce
 {
@@ -30,6 +31,7 @@ namespace Ecommerce
                 string userName = username.Text;
                 string password = passwordConf.Text;
                 bool paymentMode = false;
+                string idUtente = "";
                 //fare INSERT al db
                 string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
                 SqlConnection conn = new SqlConnection(connectionString);
@@ -56,8 +58,25 @@ namespace Ecommerce
                     if (affectedRows != 0)
                     {
                         conn.Close();
-                        Response.Write("ok nuovo utente");
-                        Response.Redirect("~/Default.aspx");
+
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM anagrafica where username=@user", conn);
+                        cmd.Parameters.AddWithValue("user", userName);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            idUtente = reader["idanagrafica"].ToString();
+                            string isAdmin = "false";
+                            Session["isAdmin"] = isAdmin;
+                        }
+
+                        FormsAuthentication.SetAuthCookie(userName, true);
+                        HttpCookie cookie = new HttpCookie("Id_Cookie");
+                        cookie.Values["id"] = idUtente;
+                        Response.Cookies.Add(cookie);
+                        conn.Close();
+                        Response.Redirect(FormsAuthentication.DefaultUrl);
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
