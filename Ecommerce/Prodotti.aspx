@@ -18,13 +18,13 @@
                 <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
+                <div class="carousel-item active" data-bs-interval="5000">
                     <img src="Content/Img/SLIDE_1.jpg" class="d-block w-100" style="background-size: contain" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Content/Img/SLIDE_2.jpg" class="d-block w-100 " alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Content/Img/SLIDE_3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
