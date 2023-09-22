@@ -65,7 +65,30 @@ section {
     top: 0;
     z-index: 100;
     background-color: #efefef;
+    padding: 0;
+
+    .button {
+        :hover {
+            color: #ffaf04;
+        }
+
+        color: black;
+        font-family: "Arima", cursive !important;
+        font-size: 1.1em;
+        border: none;
+        background: none;
+    }
+
+    i {
+        font-size: 2.2em;
+    }
+
+    .img-fluid {
+        width: 80px;
+    }
 }
+
+
 
 .container-fluid {
     font-family: "Arima", cursive !important;
@@ -73,17 +96,7 @@ section {
     border-bottom: 1px solid;
     height: 120px;
 
-    .button {
 
-        :hover {
-            color: #ffaf04;
-        }
-
-        input {
-            border: none;
-            background: none;
-        }
-    }
 
     .centered-logo {
         display: flex;
