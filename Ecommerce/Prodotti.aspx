@@ -129,10 +129,34 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-        <div class="row">
-            <div id="content2" class="col d-flex flex-column justify-content-center align-items-center mt-5">
-                <img src="Content/Img/Photo_03_rig.png" class="d-block w-100" alt="...">
+        <div class="row mt-5">
+            <h3 class="fs-big">Ordinare è semplice</h3>
+            <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-3">
+                <h4 class="fs-istruzioni">1</h4>
+                <img src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_cuore.png" alt="" class="iconaOrdina" />
+                <p class="ps-3">Seleziona i prodotti che preferisci</p>
+            </div>
+            <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-3">
+                <img src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_cart.png" alt="" class="iconaOrdina" />
+                <h4 class="fs-istruzioni">2</h4>
+                <p class="ps-3">Aggiungi al Carrello</p>
+            </div>
+            <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-3">
+                <img src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_ceck.png" alt="" class="iconaOrdina" />
+                <h4 class="fs-istruzioni">3</h4>
+                <p class="ps-3">Completa l'ordine</p>
+            </div>
+            <div class="d-flex align-items-center col-sm-12 col-md-6 col-lg-3 bg-red">
+                <img src="https://lagranda.it/wp-content/themes/stockholm-child/assets/icon_posate.png" alt="" class="iconaOrdina" />
+                <h4 class="fs-istruzioni">4</h4>
+                <p class="text-white ps-3">Gusta il prodotto</p>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div id="content2" class="col d-flex flex-column justify-content-center align-items-center mt-5">
+            <img src="Content/Img/Photo_05.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
     </div>
 </asp:Content>
