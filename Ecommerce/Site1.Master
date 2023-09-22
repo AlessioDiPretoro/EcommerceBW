@@ -14,7 +14,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-
 <body>
     <form id="form1" runat="server">
         <nav id="navbar" class="navbar-expand-lg">
@@ -42,10 +41,8 @@
                         <asp:Button ID="Button3" runat="server" Text="LOGIN" OnClick="Button3_Click" />
                     </div>
                     <div class="button position-relative">
-                        <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" runat="server" Text="CARRELLO"/>
-                        <span ID="Notifica" class="" runat="server">
-                            
-                        </span>
+                        <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" runat="server" Text="CARRELLO" />
+                        <span id="Notifica" class="" runat="server"></span>
                     </div>
 
 
@@ -82,28 +79,25 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
     </form>
+
+
+
+
+
+
 
     <footer class="mt-5" style="background-color: #efefef">
         <div class="container p-4" style="height: 100%;">
             <div class="row" style="height: 100%">
-                <div class="col-lg-6 col-md-12 mb-4">
+                <div class="col-lg-6 col-md-12 mb-4 w-25">
                     <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;"><strong>Mod Town Since 1980</strong></h5>
                     <p style="font-size: 13px;">
                         Epicode Carni nasce nel 1980 a Montesarchio in provincia di Benevento, è cresciuta negli anni grazie alla laboriosità di Guido Rossi che oggi, con passione, porta avanti la tradizione di famiglia seguendo le orme del padre Michele e del nonno Tommaso.
-                        <br />
-                        <br />
-
-                        L’azienda ora è dotata di un macello proprio riconosciuto CE, un laboratorio che produce carni di alta qualità e un innovativo e moderno punto vendita.
-                        <br />
-                        <br />
-                        Impegno e costanza sono tutt’oggi le nostre parole d’ordine.
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -114,9 +108,7 @@
                             <a href="#!" style="color: #4f4f4f;">Condizioni di Vendita</a>
                             <a href="#!" style="color: #4f4f4f;">Modalità di Pagamento</a>
                             <a href="#!" style="color: #4f4f4f;">Consegna e Trasporto</a>
-                            <a href="#!" style="color: #4f4f4f;">Chi siamo</a>
                             <a href="#!" style="color: #4f4f4f;">Politiche di reso</a>
-                            <a href="#!" style="color: #4f4f4f;">Contattaci</a>
                         </li>
                     </ul>
                 </div>
@@ -140,12 +132,38 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Dove Siamo</h5>
+                    <table class="table" style="color: #4f4f4f; border-color: #666;">
+                        <tbody>
+                            <tr>
+                                <td>Indirizzo:</td>
+                                <td>Via Carni Eccellenti, 1</td>
+                            </tr>
+                            <tr>
+                                <td>Località:</td>
+                                <td>Montesarchio, BN 82016</td>
+                            </tr>
+                            <tr>
+                                <td>Telefono:</td>
+                                <td>+39 123 456 789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
-
-        <div class="text-center p-3" style="background-color: #e1e1e1">
-            © 2023 Copyright:
-            <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">Team 4</a>
+        <div class="text-center p-3 d-flex justify-content-center" style="background-color: #e1e1e1">
+            <div class="mx-5">
+                © 2023 Copyright:
+                <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">Team 4</a>
+            </div>
+            <div class="mx-5">
+                Sito Web: 
+                <a class="text-dark" href="https://www.linkedin.com/in/marco-puccio/?originalSubdomain=it">epicodecarni.it</a>
+            </div>
         </div>
 
     </footer>

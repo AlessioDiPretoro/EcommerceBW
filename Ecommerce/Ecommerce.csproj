@@ -149,6 +149,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="LoginC\ModificaProfilo.aspx" />
+    <Content Include="Noi.aspx" />
     <Content Include="Prodotti.aspx" />
     <Content Include="ProdottiCategoria.aspx" />
     <Content Include="Promo.aspx" />
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="LoginC\ModificaProfilo.aspx.designer.cs">
       <DependentUpon>ModificaProfilo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Noi.aspx.cs">
+      <DependentUpon>Noi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Noi.aspx.designer.cs">
+      <DependentUpon>Noi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Prodotti.aspx.cs">
       <DependentUpon>Prodotti.aspx</DependentUpon>
