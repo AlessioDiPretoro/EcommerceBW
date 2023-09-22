@@ -38,6 +38,9 @@
              <div class="button">
                  <asp:Button ID="Button3" runat="server" Text="LOGIN" OnClick="Button3_Click" />
              </div>
+             <div class="button">
+                            <p id="nome" class="m-0 px-1 ps-3 button" runat="server"></p>
+                        </div>
              <div class="button position-relative">
                  <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" runat="server" Text="CARRELLO"/>
                  <span ID="Notifica" class="" runat="server">

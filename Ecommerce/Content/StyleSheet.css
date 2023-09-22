@@ -5,18 +5,12 @@ body {
   font-family: "Open Sans", sans-serif !important;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 h1, h2, h3 {
   font-family: "Arima", cursive !important;
   color: red;
-}
-
-h4 {
-  font-family: "Arima", cursive !important;
 }
 
 section {
@@ -59,23 +53,6 @@ section {
   top: 0;
   z-index: 100;
   background-color: #efefef;
-  padding: 0;
-}
-#navbar .button {
-  color: black;
-  font-family: "Arima", cursive !important;
-  font-size: 1.1em;
-  border: none;
-  background: none;
-}
-#navbar .button :hover {
-  color: #ffaf04;
-}
-#navbar i {
-  font-size: 2.2em;
-}
-#navbar .img-fluid {
-  width: 80px;
 }
 
 .container-fluid {
@@ -83,6 +60,13 @@ section {
   background-color: white;
   border-bottom: 1px solid;
   height: 120px;
+}
+.container-fluid .button :hover {
+  color: #ffaf04;
+}
+.container-fluid .button input {
+  border: none;
+  background: none;
 }
 .container-fluid .centered-logo {
   display: flex;
@@ -101,20 +85,6 @@ section {
   height: 25em;
 }
 
-.fit-carousel {
-  object-fit: cover;
-  height: 30em;
-}
-
-@media screen and (max-width: 600px) {
-  .carousel-inner {
-    height: 18em;
-  }
-  .fit-carousel {
-    object-fit: cover;
-    height: 100%;
-  }
-}
 /*Content*/
 #content .img-title {
   width: 150px;
@@ -292,24 +262,4 @@ section {
   background: none;
   border: 1px solid red;
   color: red;
-}
-
-/*PAGINA PRODOTTI*/
-.fs-big {
-  font-size: 4em;
-}
-
-.fs-istruzioni {
-  font-size: 10em;
-  opacity: 0.5;
-}
-
-.iconaOrdina {
-  padding: 0 15px 25px 15px;
-  position: absolute;
-  z-index: 1;
-}
-
-.bg-red {
-  background-color: red;
 }
