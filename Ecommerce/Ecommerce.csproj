@@ -131,6 +131,9 @@
     <Content Include="Content\Img\Photo_04_rig.png" />
     <Content Include="Content\Img\Promo_Sticker.png" />
     <Content Include="Content\Img\sede.png" />
+    <Content Include="Content\Img\SLIDE_1.jpg" />
+    <Content Include="Content\Img\SLIDE_2.jpg" />
+    <Content Include="Content\Img\SLIDE_3.jpg" />
     <Content Include="Content\Img\vitello.png" />
     <Content Include="Content\Img\vitello2.png" />
     <Content Include="Content\Img\vitello_intero.jpg" />

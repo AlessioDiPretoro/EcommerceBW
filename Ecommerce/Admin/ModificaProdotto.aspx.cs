@@ -15,6 +15,7 @@ namespace Ecommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            OkModificato.Visible = false;
             if (!IsPostBack)
             {
                 //verifica se lo user è ADMIN
@@ -139,6 +140,7 @@ namespace Ecommerce.Admin
                 cmdEdit.Parameters.AddWithValue("idprodotto", _id);
 
                 cmdEdit.ExecuteNonQuery();
+                OkModificato.Visible = true;
             }
             catch (Exception ex) { Response.Write(ex.Message); }
             finally

@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container p-5">
         <h1 class="text-center mb-2">Aggiungi Prodotti</h1>
+        <h2 runat="server" class="alert alert-info" id="OkModificato">Prodotto aggiunto</h2>
         <div class="row row-cols-2 px-5">
             <div class="col">
                 <%-- Nome Prodotto --%>

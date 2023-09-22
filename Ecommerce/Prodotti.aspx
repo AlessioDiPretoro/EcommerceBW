@@ -19,13 +19,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="Content/Img/Photo_03.jpg" class="d-block w-100" style="background-size: contain" alt="...">
+                    <img src="Content/Img/SLIDE_1.jpg" class="d-block w-100" style="background-size: contain" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="Content/Img/Photo_04.jpg" class="d-block w-100 " alt="...">
+                    <img src="Content/Img/SLIDE_2.jpg" class="d-block w-100 " alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="Content/Img/Photo_02.jpg" class="d-block w-100" alt="...">
+                    <img src="Content/Img/SLIDE_3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
