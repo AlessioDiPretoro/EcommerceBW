@@ -85,6 +85,20 @@ section {
   height: 25em;
 }
 
+.fit-carousel {
+  object-fit: cover;
+  height: 30em;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-inner {
+    height: 18em;
+  }
+  .fit-carousel {
+    object-fit: cover;
+    height: 100%;
+  }
+}
 /*Content*/
 #content .img-title {
   width: 150px;
