@@ -74,7 +74,6 @@
         </div>
     </div>
 
-
     <h2 class="text-center">Prodotti scelti per te</h2>
     <div class="container m-auto row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
         <div class="col my-3">
@@ -88,7 +87,7 @@
                 </div>
             </div>
         </div>
-                <div class="col my-3">
+        <div class="col my-3">
             <div class="card h-100 d-flex flex-column justify-content-between align-content-between border border-1 border-dark">
                 <div class="img-container">
                     <asp:Image ID="Image5" CssClass="card-img img-title card-img-top" ImageUrl="https://shop.ilmannarino.it/wp-content/uploads/2023/06/bavarese-costata_marmo_interna.jpg" runat="server" />
@@ -98,9 +97,9 @@
                     <h3 class="card-title" style="height: 3em">Costata bavarese</h3>
                 </div>
             </div>
-        </div>        
-        <div class="col my-3">    
-        <div class="card h-100 d-flex flex-column justify-content-between align-content-between border border-1 border-dark">
+        </div>
+        <div class="col my-3">
+            <div class="card h-100 d-flex flex-column justify-content-between align-content-between border border-1 border-dark">
                 <div class="img-container">
                     <asp:Image ID="Image9" CssClass="card-img img-title card-img-top" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/Bistecca-frollata_1fronte.jpg" runat="server" />
                 </div>
@@ -111,7 +110,6 @@
             </div>
         </div>
     </div>
-
 
     <div id="content5" class="d-flex flex-column justify-content-center align-items-center">
         <h2>I Prodotti</h2>
@@ -126,7 +124,7 @@
                         <br>
                         Lo facciamo nel Chianti, con passione e cura, da ben 9 generazioni, rispettando ricette e saperi tradizionali.
                     </div>
-                    <asp:Button ID="Button2" runat="server" style="max-width:200px" Text="Scopri di più" />
+                    <asp:Button ID="Button2" runat="server" Style="max-width: 200px" Text="Scopri di più" />
                 </div>
                 <div class="col-md-4">
                     <asp:Image ID="Image8" CssClass="card-img" ImageUrl="https://lagranda.it/wp-content/uploads/2022/09/SalsicciaStagionata_1.jpg" runat="server" />
@@ -134,4 +132,5 @@
             </div>
         </div>
     </div>
+
 </asp:Content>
