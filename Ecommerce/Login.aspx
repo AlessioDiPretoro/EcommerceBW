@@ -10,7 +10,7 @@
     <link href="Content/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="LoginButton">
         <section class="vh-100">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -45,7 +45,7 @@
                                         </div>
 
                                         <div class="pt-1 mb-4 d-flex align-items-center">
-                                            <asp:Button ID="LoginButton" CssClass="btn btn-dark btn-lg btn-block" runat="server" Text="Login" OnClick="LoginButton_Click" />
+                                            <asp:Button ID="LoginButton" CssClass="btn btn-dark btn-lg btn-block" runat="server" Text="Login"  OnClick="LoginButton_Click" />
                                         <div runat="server" class="mx-3" style="color: red;" id="ErrorLogin">Dati utente errati</div>
                                         </div>
 

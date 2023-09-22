@@ -51,6 +51,7 @@ namespace Ecommerce
                     FormsAuthentication.SetAuthCookie(_user, true);
                     HttpCookie cookie = new HttpCookie("Id_Cookie");
                     cookie.Values["id"] = idUtente;
+                    cookie.Expires.AddDays(20);
                     Response.Cookies.Add(cookie);
                     Response.Redirect(FormsAuthentication.DefaultUrl);
                 }
