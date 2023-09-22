@@ -14,79 +14,79 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid p-5">
-                <asp:ImageButton ID="ImageButton1" runat="server" CssClass="img-fluid" PostBackUrl="~/Default.aspx" ImageUrl="~/Content/Img/newlogo.png" />
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light p-3">
+            <div style="display: flex; flex-direction: column;">
+                <asp:ImageButton ID="ImageButton1" runat="server" CssClass="img-fluid mx-auto mb-3" PostBackUrl="~/Default.aspx" ImageUrl="~/Content/Img/newlogo.png" />
                 <button
                     class="navbar-toggler"
                     type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarButtonsExample"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarButtonsExample"
                     aria-controls="navbarButtonsExample"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item button">
-                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link button" PostBackUrl="~/Prodotti.aspx">Prodotti</asp:LinkButton>
-                        </li>
-                        <li class="nav-item button">
-                            <asp:LinkButton ID="LinkButton2" runat="server" CssClass="nav-link button" PostBackUrl="~/Noi.aspx">Chi Siamo</asp:LinkButton>
-                        </li>
-                        <li class="nav-item button">
-                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="nav-link button" PostBackUrl="~/Promo.aspx">Promo</asp:LinkButton>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center">
-                        <div class="button position-relative">
-                            <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" CssClass="button" runat="server" Text="Carrello" />
-                            <span id="Notifica" class="" runat="server"></span>
-                        </div>
-                        <%--Login--%>
-                        <div class="button">
-                            <asp:Button ID="Button3" runat="server" Text="LOGIN" CssClass="button" OnClick="Button3_Click" />
-                        </div>
-                        <div class="button">
-                            <p id="nome" class="m-0 px-1 ps-3 button" runat="server"></p>
-                        </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item button">
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link button" PostBackUrl="~/Prodotti.aspx">Prodotti</asp:LinkButton>
+                    </li>
+                    <li class="nav-item button">
+                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="nav-link button" PostBackUrl="~/Noi.aspx">Chi Siamo</asp:LinkButton>
+                    </li>
+                    <li class="nav-item button">
+                        <asp:LinkButton ID="LinkButton3" runat="server" CssClass="nav-link button" PostBackUrl="~/Promo.aspx">Promo</asp:LinkButton>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="button position-relative">
+                        <asp:Button ID="Button4" PostBackUrl="~/LoginC/Carrello.aspx" CssClass="button" runat="server" Text="Carrello" />
+                        <span id="Notifica" class="" runat="server"></span>
+                    </div>
+                    <%--Login--%>
+                    <div class="button">
+                        <asp:Button ID="Button3" runat="server" Text="LOGIN" CssClass="button" OnClick="Button3_Click" />
+                    </div>
+                    <div class="button">
+                        <p id="nome" class="m-0 px-1 ps-3 button" runat="server"></p>
+                    </div>
 
 
-                        <div id="drop" runat="server" class="dropdown ps-2">
+                    <div id="drop" runat="server" class="dropdown ps-2">
 
-                            <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle text-secondary"></i>
-                            </a>
+                        <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle text-secondary"></i>
+                        </a>
 
-                            <ul class="dropdown-menu dropdown-menu-end text-small">
-                                <li>
-                                    <div class="button">
-                                        <asp:Button ID="MostraProdottiBtn" PostBackUrl="~/Admin/GrigliaProdotti.aspx" CssClass="button" runat="server" Text="LISTA PRODOTTI" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="button">
-                                        <asp:Button ID="Button7" PostBackUrl="~/Admin/NuovoProdotto.aspx" CssClass="button" runat="server" Text="AGGIUNGI PRODOTTO" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="button">
-                                        <asp:Button ID="ModificaProfiloBtn" runat="server" CssClass="button" Text="MODIFICA PROFILO" OnClick="ModificaProfiloBtn_Click" />
-                                    </div>
-                                </li>
+                        <ul class="dropdown-menu dropdown-menu-end text-small">
+                            <li>
+                                <div class="button">
+                                    <asp:Button ID="MostraProdottiBtn" PostBackUrl="~/Admin/GrigliaProdotti.aspx" CssClass="button" runat="server" Text="LISTA PRODOTTI" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button">
+                                    <asp:Button ID="Button7" PostBackUrl="~/Admin/NuovoProdotto.aspx" CssClass="button" runat="server" Text="AGGIUNGI PRODOTTO" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button">
+                                    <asp:Button ID="ModificaProfiloBtn" runat="server" CssClass="button" Text="MODIFICA PROFILO" OnClick="ModificaProfiloBtn_Click" />
+                                </div>
+                            </li>
 
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <div class="button">
-                                        <%--Login--%>
-                                        <asp:Button ID="Button9" runat="server" CssClass="button" Text="LOGIN" OnClick="Button9_Click" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <div class="button">
+                                    <%--Login--%>
+                                    <asp:Button ID="Button9" runat="server" CssClass="button" Text="LOGIN" OnClick="Button9_Click" />
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

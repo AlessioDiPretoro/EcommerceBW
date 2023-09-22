@@ -95,7 +95,40 @@ section {
     }
 }
 
+#navbar {
+  display: flex;
+  flex-direction: column;
+}
 
+@media (min-width: 1000px) {
+  #navbar {
+    flex-direction: row;
+  }
+
+  #navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar .navbar-collapse {
+    flex-grow: 1;
+  }
+
+  #navbar .navbar-toggler {
+    display: none;
+  }
+
+  #navbar ul.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #navbar .button {
+    margin-left: 1rem;
+  }
+}
 
 .container-fluid {
     font-family: "Arima", cursive !important;
