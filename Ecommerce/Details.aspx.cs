@@ -27,7 +27,7 @@ namespace Ecommerce
 
                         while (reader.Read())
                         {
-                            double prezzob= Convert.ToDouble(reader["prezzoBase"]);
+                            double prezzob = Convert.ToDouble(reader["prezzoBase"]);
                             int sconto = Convert.ToInt32(reader["Sconto"]);
 
                             ImageButton1.ImageUrl = reader["copertina"].ToString();
@@ -36,20 +36,33 @@ namespace Ecommerce
                             DescLu.Text = reader["descrizioneLunga"].ToString();
                             if (reader["inEvidenza"].ToString() == "True")
                             {
-                               
-                                prezzob = prezzob-( prezzob * sconto / 100);
-                                Prezzo.Text= prezzob.ToString("C2");
+                                prezzob = prezzob - (prezzob * sconto / 100);
+                                Prezzo.Text = prezzob.ToString("C2");
                             }
                             else
                             {
-                            Prezzo.Text = prezzob.ToString("C2");
-
+                                Prezzo.Text = prezzob.ToString("C2");
                             }
                             ImageButton2.ImageUrl = reader["immagine1"].ToString();
                             ImageButton3.ImageUrl = reader["immagine2"].ToString();
                             ImageButton4.ImageUrl = reader["immagine3"].ToString();
                             ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
+                            if (ImageButton2.ImageUrl == "")
+                            {
+                                ImageButton2.Visible = false;
+                            }
+                            if (ImageButton3.ImageUrl == "")
+                            {
+                                ImageButton3.Visible = false;
+                            }
+                            if (ImageButton4.ImageUrl == "")
+                            {
+                                ImageButton4.Visible = false;
+                            }
+                            if (ImageButton5.ImageUrl == "")
+                            {
+                                ImageButton5.Visible = false;
+                            }
                         }
                     }
                     catch (Exception ex) { Response.Write(ex.Message); }
@@ -115,20 +128,17 @@ namespace Ecommerce
                         DescLu.Text = reader["descrizioneLunga"].ToString();
                         if (reader["inEvidenza"].ToString() == "True")
                         {
-
                             prezzob = prezzob - (prezzob * sconto / 100);
                             Prezzo.Text = prezzob.ToString("C2");
                         }
                         else
                         {
                             Prezzo.Text = prezzob.ToString("C2");
-
                         }
                         ImageButton2.ImageUrl = reader["immagine1"].ToString();
                         ImageButton3.ImageUrl = reader["immagine2"].ToString();
                         ImageButton4.ImageUrl = reader["immagine3"].ToString();
                         ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
@@ -165,33 +175,25 @@ namespace Ecommerce
                         double prezzob = Convert.ToDouble(reader["prezzoBase"]);
                         int sconto = Convert.ToInt32(reader["Sconto"]);
 
-
                         ImageButton1.ImageUrl = reader["immagine2"].ToString();
 
-                      
                         NomeProd.Text = reader["nomeProdotto"].ToString();
                         DescB.Text = reader["descrizioneBreve"].ToString();
                         DescLu.Text = reader["descrizioneLunga"].ToString();
                         if (reader["inEvidenza"].ToString() == "True")
                         {
-
                             prezzob = prezzob - (prezzob * sconto / 100);
                             Prezzo.Text = prezzob.ToString("C2");
                         }
                         else
                         {
                             Prezzo.Text = prezzob.ToString("C2");
-
                         }
                         ImageButton2.ImageUrl = reader["immagine1"].ToString();
                         ImageButton3.ImageUrl = reader["immagine2"].ToString();
                         ImageButton4.ImageUrl = reader["immagine3"].ToString();
                         ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
-                      
                     }
-                   
-                    
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
                 finally
@@ -233,20 +235,17 @@ namespace Ecommerce
                         DescLu.Text = reader["descrizioneLunga"].ToString();
                         if (reader["inEvidenza"].ToString() == "True")
                         {
-
                             prezzob = prezzob - (prezzob * sconto / 100);
                             Prezzo.Text = prezzob.ToString("C2");
                         }
                         else
                         {
                             Prezzo.Text = prezzob.ToString("C2");
-
                         }
                         ImageButton2.ImageUrl = reader["immagine1"].ToString();
                         ImageButton3.ImageUrl = reader["immagine2"].ToString();
                         ImageButton4.ImageUrl = reader["immagine3"].ToString();
                         ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
@@ -289,20 +288,17 @@ namespace Ecommerce
                         DescLu.Text = reader["descrizioneLunga"].ToString();
                         if (reader["inEvidenza"].ToString() == "True")
                         {
-
                             prezzob = prezzob - (prezzob * sconto / 100);
                             Prezzo.Text = prezzob.ToString("C2");
                         }
                         else
                         {
                             Prezzo.Text = prezzob.ToString("C2");
-
                         }
                         ImageButton2.ImageUrl = reader["immagine1"].ToString();
                         ImageButton3.ImageUrl = reader["immagine2"].ToString();
                         ImageButton4.ImageUrl = reader["immagine3"].ToString();
                         ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
@@ -345,20 +341,17 @@ namespace Ecommerce
                         DescLu.Text = reader["descrizioneLunga"].ToString();
                         if (reader["inEvidenza"].ToString() == "True")
                         {
-
                             prezzob = prezzob - (prezzob * sconto / 100);
                             Prezzo.Text = prezzob.ToString("C2");
                         }
                         else
                         {
                             Prezzo.Text = prezzob.ToString("C2");
-
                         }
                         ImageButton2.ImageUrl = reader["immagine1"].ToString();
                         ImageButton3.ImageUrl = reader["immagine2"].ToString();
                         ImageButton4.ImageUrl = reader["immagine3"].ToString();
                         ImageButton5.ImageUrl = reader["immagine4"].ToString();
-
                     }
                 }
                 catch (Exception ex) { Response.Write(ex.Message); }
