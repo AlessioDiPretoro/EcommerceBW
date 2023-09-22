@@ -23,7 +23,8 @@ namespace Ecommerce
                 cartListUserNow = (List<Cart>)Session["sessionCart"];
                 if (cartListUserNow.Count > 0)
                 {
-                    Notifica.Attributes["class"] = "notifica p-1 bg-danger border border-light rounded-circle";
+                    Notifica.Attributes["class"] = "notifica bg-danger";
+                    Notifica.InnerText = cartListUserNow.Count.ToString();
                 }
             }
 
