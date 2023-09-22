@@ -55,7 +55,7 @@ namespace Ecommerce.LoginC
             }
         }
 
-        protected async void EditProf_Click(object sender, EventArgs e)
+        protected void EditProf_Click(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DB_ConnString"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);

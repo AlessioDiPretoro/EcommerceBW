@@ -5,7 +5,9 @@ body {
   font-family: "Open Sans", sans-serif !important;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -81,10 +83,6 @@ section {
 
 /* SEZIONE HOME PAGE */
 /*Carousel*/
-.carousel-inner {
-  height: 25em;
-}
-
 /*Content*/
 #content .img-title {
   width: 150px;

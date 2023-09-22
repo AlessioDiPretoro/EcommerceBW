@@ -13,7 +13,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class=" flex-grow-1 ">
         <nav id="navbar" class="navbar-expand-lg">
      <div class="container-fluid d-flex justify-content-evenly align-items-center ">
          <div class="d-flex">
