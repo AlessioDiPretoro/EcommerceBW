@@ -26,7 +26,7 @@
                         <asp:Button ID="Button2" PostBackUrl="~/Prodotti.aspx" runat="server" Text="I PRODOTTI" />
                     </div>
                     <div class="button">
-                        <asp:Button ID="Button5" PostBackUrl="#" runat="server" Text="CHI SIAMO" />
+                        <asp:Button ID="Button5" PostBackUrl="~/Noi.aspx" runat="server" Text="CHI SIAMO" />
                     </div>
                     <div class="button">
                         <asp:Button ID="Button6" PostBackUrl="~/Promo.aspx" runat="server" Text="PROMO" />
