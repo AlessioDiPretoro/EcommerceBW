@@ -17,6 +17,7 @@ namespace Ecommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            OkModificato.Visible = false;
             //verifica se lo user è ADMIN
             if (!IsPostBack)
             {
@@ -95,7 +96,7 @@ namespace Ecommerce.Admin
                 int affectedRows = cmdInsert.ExecuteNonQuery();
                 if (affectedRows != 0)
                 {
-                    Response.Write("ok inserimento");
+                    OkModificato.Visible = true;
                 }
             }
             catch (Exception ex) { Response.Write(ex.Message); }

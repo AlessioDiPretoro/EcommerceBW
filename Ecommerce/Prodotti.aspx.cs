@@ -46,7 +46,7 @@ namespace Ecommerce
                     Product.NomeProdotto = sqlDataReader["nomeProdotto"].ToString();
                     Product.Peso = Convert.ToDouble(sqlDataReader["peso"]);
                     Product.DescrizioneBreve = sqlDataReader["descrizioneBreve"].ToString();
-                    Product.InEvidenza= Convert.ToBoolean(sqlDataReader["inEvidenza"]);
+                    Product.InEvidenza = Convert.ToBoolean(sqlDataReader["inEvidenza"]);
                     Product.PrezzoBase = Convert.ToDouble(sqlDataReader["prezzoBase"]);
                     Product.ScontoPercentuale = Convert.ToInt32(sqlDataReader["sconto"]);
                     ListaProdotti.Add(Product);
@@ -188,7 +188,7 @@ namespace Ecommerce
                     ListaProdotti.Add(Product);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Response.Write(ex.ToString());
             }
